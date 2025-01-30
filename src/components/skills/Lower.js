@@ -22,8 +22,8 @@ const Lower = () => {
                         <div className='skills__data'>
                             <i className='bx bx-badge-check'></i>
                             <div>
-                                <h3 className='skills__name'>Tailwind</h3>
-                                <span className='skills__level'>Advance</span>
+                                <h3 className='skills__name'>Docker</h3>
+                                <span className='skills__level'>Beginner</span>
                             </div>
                         </div>
 
@@ -80,4 +80,4 @@ const Lower = () => {
     )
 }
 
-export default Lower
+export default Lower;

@@ -11,7 +11,7 @@
 .qualification__button {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
-    color: var(--title-color);
+    color: gray;
     margin: 0 var(--mb-1);
     cursor: pointer;
 }
@@ -20,13 +20,13 @@
     color: var(--title-color-dark);
 }
 
+.qualification__active {
+    color: var(--title-color-dark);
+}
+
 .qualification__icon {
     font-size: 1.8rem;
     margin-right: var(--mb-0-25);
-}
-
-.qualification__active {
-    color: var(--title-color-dark);
 }
 
 .qualification__sections {
