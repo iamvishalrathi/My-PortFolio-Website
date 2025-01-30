@@ -15,7 +15,7 @@ export const projectsData = [
         title: 'Podcastr',
         category: 'major',
         link: 'https://podcastr-two-rho.vercel.app/',
-        description: 'A podcast streaming platform with a sleek design and user-friendly interface.'
+        description: 'An AI-powered SaaS podcast streaming platform by Next.js.'
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ export const projectsData = [
         title: 'Chatterly ChatApp',
         category: 'major',
         link: 'https://chatterly-hp0h.onrender.com/signup',
-        description: 'A real-time chat application with various chat rooms and private messaging.'
+        description: 'A real-time chat application using Socket.io and React.'
     },
     {
         id: 3,
@@ -31,7 +31,7 @@ export const projectsData = [
         title: 'Voyage Vista',
         category: 'clone',
         link: 'https://voyage-vista-project.onrender.com/listings',
-        description: 'A travel booking platform clone with search and booking functionalities.'
+        description: 'An Airbnb clone with search and booking functionalities.'
     },
     {
         id: 4,
@@ -55,7 +55,7 @@ export const projectsData = [
         title: 'Sky Tracer',
         category: 'minor',
         link: 'https://sky-tracer.netlify.app/',
-        description: 'A weather tracking application with real-time updates and forecasts.'
+        description: 'A weather tracking application with real-time updates.'
     },
     {
         id: 7,
@@ -63,7 +63,7 @@ export const projectsData = [
         title: 'Expense-tracker',
         category: 'minor',
         link: 'https://money-tracker-cd74a4.netlify.app/',
-        description: 'A simple expense tracking application to manage your finances.'
+        description: 'An expense tracking application to manage finances.'
     },
     {
         id: 8,
@@ -71,7 +71,7 @@ export const projectsData = [
         title: 'Simon Game',
         category: 'minor',
         link: 'https://simon-brain-game.netlify.app/',
-        description: 'A fun and interactive memory game based on the classic Simon game.'
+        description: 'A fun and interactive memory game.'
     },
     {
         id: 9,
