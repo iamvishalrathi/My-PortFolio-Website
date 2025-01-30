@@ -22,8 +22,7 @@
 
 .work__container {
     grid-template-columns: repeat(1, max-content);
-    gap: 3rem;
-    width: 750px;
+    width: 300px;
     justify-content: center;
 }
 
@@ -55,7 +54,6 @@
 }
 
 .work__title {
-    font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-5);
 }
@@ -66,6 +64,7 @@
     display: flex;
     align-items: center;
     column-gap: 0.25rem;
+    margin-top: 20px;
 }
 
 .work__button-icon {
@@ -82,10 +81,69 @@
     color: var(--container-color);
 }
 
+.swiper-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align items at the start */
+    position: relative;
+    gap: 0;
+    /* Ensure there's no gap between items */
+    width: 40%;
+    /* Reduce the width to 50% */
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+.swiper-button-left,
+.swiper-button-right {
+    position: relative;
+    /* Buttons are positioned absolutely within the container */
+    top: 50%;
+    /* Vertically center the buttons */
+    transform: translateY(-50%);
+    /* Adjust to exactly center the buttons vertically */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Add background color */
+    color: white;
+    /* Set the icon color to white */
+    border: none;
+    /* Remove border */
+    border-radius: 50%;
+    /* Make the buttons round */
+    width: 40px;
+    /* Width of the button */
+    height: 40px;
+    /* Height of the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.swiper-button-left:hover,
+.swiper-button-right:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Darker background on hover */
+}
+
+.bx {
+    font-size: 18px;
+    /* Adjust icon size */
+}
+
+.work__description {
+    max-width: 300px;
+    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
 @media screen and (max-width: 992px) {
-    .work__container {
-        gap: 1.25rem;
-        /* width: initial; */
+    .swiper-container {
+        width: 60%;
     }
 
     .work__card {
@@ -103,18 +161,29 @@
 }
 
 @media screen and (max-width: 768px) {
-    .work__container {
-        grid-template-columns: max-content;
+    .swiper-container {
+        width: 80%;
+    }
+
+    .work__card {
+        padding: 1rem 1.25rem;
+    }
+
+    .work__img {
+        width: 100%;
+    }
+
+    .work__description {
+        max-width: 100%;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .work__container {
-        grid-template-columns: 1fr;
-        width: auto;
+    .swiper-container {
+        width: 100%;
     }
 
-    .work__card{
+    .work__card {
         padding: 1rem;
     }
 
@@ -132,4 +201,28 @@
         column-gap: 0.25rem;
     }
 
+}
+
+.works-container {
+    position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
 }

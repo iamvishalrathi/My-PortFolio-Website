@@ -68,8 +68,8 @@ const Upper = () => {
                         <div className='skills__data'>
                             <i className='bx bx-badge-check'></i>
                             <div>
-                                <h3 className='skills__name'>MongoDB</h3>
-                                <span className='skills__level'>Advance</span>
+                                <h3 className='skills__name'>MongoDB/PostgreSQL</h3>
+                                <span className='skills__level'>Intermediate</span>
                             </div>
                         </div>
 
@@ -77,8 +77,8 @@ const Upper = () => {
                             <i className='bx bx-badge-check'></i>
                             <div>
                                 <h3 className='skills__name'>
-                                    PostgreSQL</h3>
-                                <span className='skills__level'>Intermediate</span>
+                                    Prisma ORM</h3>
+                                <span className='skills__level'>Beginner</span>
                             </div>
                         </div>
                     </div>

@@ -8,7 +8,7 @@ const Data = () => {
       </h1>
       <h3 className='home__subtitle'>{`<h3> Full Stack Developer </h3>`}</h3>
       <p className='home__description'>
-        I'm a creative Web Developer based in New Delhi and
+        I'm a Full Stack Developer based in New Delhi and
         highly passionate about programming, computer science
         and technology.
       </p>
