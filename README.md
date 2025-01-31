@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://sjc.microlink.io/66zxI55T5LtOeC9VtRd4SYKg9Ob6xbX63tIYJZj0lEWU99FDsiXgPO4cbEHu6CIUqqBHZ-VAhJ6Zn39cuGWQ6g.jpeg" alt="Portfolio Logo" width="100" height="100"/>
+  <img src="https://github.com/iamvishalrathi/My-PortFolio-Website/blob/main/public/favicon.png" alt="Portfolio Logo" width="100" height="100"/>
   
   # Vishal Kumar's Portfolio
   
