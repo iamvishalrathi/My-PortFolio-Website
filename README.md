@@ -13,14 +13,7 @@ Welcome to my portfolio website! This site showcases my skills, projects, and ex
 
 ## 🚀 About Me
 
-Hello! I am **Vishal Kumar**, a passionate software developer with expertise in:
-
-- Java Development
-- Web Development
-- Problem Solving
-- Innovation
-
-I thrive on solving complex problems and creating innovative solutions. This portfolio highlights some of my best work and achievements.
+I'm a Full Stack Developer based in New Delhi and highly passionate about programming, computer science and technology.
 
 ## 📫 Get in Touch
 
