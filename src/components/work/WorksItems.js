@@ -2,7 +2,7 @@ import React from 'react'
 
 const WorksItems = ({ item }) => {
   return (
-    <div className='work__card' key={item.id}>
+    <div className='work__card fixed-height' key={item.id}>
       <img src={item.image} alt='' className='work__img' />
       <h1 className='work__title'>{item.title}</h1>
       <p className='work__description'>{item.description}</p>

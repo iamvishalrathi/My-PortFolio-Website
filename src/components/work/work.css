@@ -47,6 +47,14 @@
     margin-bottom: 3rem;
 }
 
+.fixed-height {
+    height: 500px;
+    /* Set your desired height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .work__img {
     width: 315px;
     border-radius: 1rem;
