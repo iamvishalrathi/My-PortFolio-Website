@@ -22,7 +22,7 @@ const About = () => {
             (NCC) cadet, embracing leadership, teamwork, and community service.
           </p>
 
-          <a download='' href={CV} className='button button--flex'>Download CV
+          <a target="_blank" href={"https://docs.google.com/document/d/1qn3W0DLuKvnrGd5qkDPmQvbko3we2-oOYVmApbv1fvE/edit?usp=sharing"} className='button button--flex'>View CV
             <svg
               className="button__icon"
               xmlns="http://www.w3.org/2000/svg"
