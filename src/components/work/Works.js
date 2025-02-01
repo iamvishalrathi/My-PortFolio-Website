@@ -71,7 +71,7 @@ const Works = () => {
             clickable: true,
           }}
           autoplay={{
-            delay: 2000, // 3 seconds for each slide
+            delay: 3000, // 3 seconds for each slide
             disableOnInteraction: false, // Keep autoplay even after user interaction
           }}
           speed={2000}

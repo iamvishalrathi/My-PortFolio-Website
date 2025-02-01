@@ -215,6 +215,18 @@
     position: relative;
 }
 
+.work__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work__button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Adjust the gap between icon and text as needed */
+}
+
 .swiper-button-prev,
 .swiper-button-next {
     position: absolute;

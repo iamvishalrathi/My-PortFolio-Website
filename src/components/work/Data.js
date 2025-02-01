@@ -14,7 +14,8 @@ export const projectsData = [
         image: Work1,
         title: 'Podcastr',
         category: 'major',
-        link: 'https://podcastr-two-rho.vercel.app/',
+        link: 'https://my-podcastr.vercel.app/',
+        github: 'https://github.com/iamvishalrathi/Podcastr',
         description: 'An AI-powered SaaS podcast streaming platform by Next.js.'
     },
     {
@@ -23,6 +24,7 @@ export const projectsData = [
         title: 'Chatterly ChatApp',
         category: 'major',
         link: 'https://chatterly-hp0h.onrender.com/signup',
+        github: 'https://github.com/iamvishalrathi/Chatterly-ChatApp',
         description: 'A real-time chat application using Socket.io and React.'
     },
     {
@@ -31,6 +33,7 @@ export const projectsData = [
         title: 'Voyage Vista',
         category: 'clone',
         link: 'https://voyage-vista-project.onrender.com/listings',
+        github: 'https://github.com/iamvishalrathi/Voyage-Vista',
         description: 'An Airbnb clone with search and booking functionalities.'
     },
     {
@@ -39,6 +42,7 @@ export const projectsData = [
         title: 'SharePrompt',
         category: 'clone',
         link: 'https://shareprompt.onrender.com/',
+        github: 'https://github.com/iamvishalrathi/SharePrompt',
         description: 'A platform for sharing prompts and creative writing ideas.'
     },
     {
@@ -47,6 +51,7 @@ export const projectsData = [
         title: 'DevPad',
         category: 'major',
         link: 'https://devpad2-0.onrender.com/',
+        github: 'https://github.com/iamvishalrathi/DevPad',
         description: 'An online code editor with real-time collaboration features.'
     },
     {
@@ -55,14 +60,16 @@ export const projectsData = [
         title: 'Sky Tracer',
         category: 'minor',
         link: 'https://sky-tracer.netlify.app/',
+        github: 'https://github.com/iamvishalrathi/Sky-Tracer',
         description: 'A weather tracking application with real-time updates.'
     },
     {
         id: 7,
         image: Work7,
-        title: 'Expense-tracker',
+        title: 'Budget Buddy',
         category: 'minor',
-        link: 'https://money-tracker-cd74a4.netlify.app/',
+        link: 'https://my-budget-buddy.netlify.app/',
+        github: 'https://github.com/iamvishalrathi/budget-buddy',
         description: 'An expense tracking application to manage finances.'
     },
     {
@@ -71,6 +78,7 @@ export const projectsData = [
         title: 'Simon Game',
         category: 'minor',
         link: 'https://simon-brain-game.netlify.app/',
+        github: 'https://github.com/iamvishalrathi/Simon-Game',
         description: 'A fun and interactive memory game.'
     },
     {
@@ -78,7 +86,8 @@ export const projectsData = [
         image: Work9,
         title: 'Spotify Clone',
         category: 'clone',
-        link: 'https://github.com/iamvishalrathi/Spotify-Clone',
+        link: 'https://listen-spotify.netlify.app/',
+        github: 'https://github.com/iamvishalrathi/Spotify-Clone',
         description: 'A clone of the popular music streaming service Spotify.'
     },
 ]
