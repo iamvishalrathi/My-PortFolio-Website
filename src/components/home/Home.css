@@ -135,8 +135,11 @@
     }
 
     .home__subtitle {
-        padding-left: 3.75;
+        padding-left: 3.75rem;
         margin-bottom: var(--mb-1);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .home__subtitle::before {
@@ -166,6 +169,12 @@
     .home__data {
         width: max-content;
     }
+
+    .home__subtitle {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 /* For medium devices */
@@ -190,6 +199,12 @@
     .home__scroll {
         display: none;
     }
+
+    .home__subtitle {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 /* For small devices */
@@ -202,5 +217,11 @@
     .home__hand {
         width: 35px;
         height: 35px;
+    }
+
+    .home__subtitle {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
