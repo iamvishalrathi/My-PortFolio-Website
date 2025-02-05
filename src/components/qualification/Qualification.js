@@ -84,7 +84,7 @@ const Qualification = () => {
                 <h3 className='qualification__title'>Full Stack Developer</h3>
                 <span className='qualification__subtitle'>Truxie Startup</span>
                 <div className='qualification__calender'>
-                  <i className='uil uil-calendar-alt'></i> November 2024 - Present
+                  <i className='uil uil-calendar-alt'></i> Nov 2024 - Present
                 </div>
               </div>
 
@@ -114,7 +114,7 @@ const Qualification = () => {
                 <h3 className='qualification__title'>Full Stack Developer</h3>
                 <span className='qualification__subtitle'>CoderOne</span>
                 <div className='qualification__calender'>
-                  <i className='uil uil-calendar-alt'></i> June 2024 - August 2024
+                  <i className='uil uil-calendar-alt'></i> Jun 2024 - Aug 2024
                 </div>
               </div>
               <div>
