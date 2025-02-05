@@ -205,6 +205,10 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+        .home__title {
+            font-size: calc(var(--big-font-size) - 0.5rem);
+        }
 }
 
 /* For small devices */
@@ -223,5 +227,9 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .home__title {
+        font-size: calc(var(--big-font-size) - 0.1rem);
     }
 }
