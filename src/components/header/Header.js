@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Header.css'
 
 const Header = () => {
@@ -9,6 +9,23 @@ const Header = () => {
 })
   const [toggle, setToggle] = useState(false)
   const [activeNav, setActiveNav] = useState('#home')
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Check if user previously selected dark theme
+    const savedTheme = localStorage.getItem('selected-theme');
+    if (savedTheme === 'dark') {
+      setIsDark(true);
+      document.body.classList.add('dark-theme');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+    document.body.classList.toggle('dark-theme');
+    localStorage.setItem('selected-theme', isDark ? 'light' : 'dark');
+  };
+
   return (
     <header className='header'>
       <nav className='nav container'>
@@ -50,6 +67,11 @@ const Header = () => {
               "nav__link active-link" : 'nav__link'}>
                 <i className='uil uil-message nav__icon'></i> Contact
               </a>
+            </li>
+            <li className='nav__item'>
+              <div className='nav__link' onClick={toggleTheme}>
+                <i className={`bx ${isDark ? 'bx-sun' : 'bx-moon'}`}></i>
+              </div>
             </li>
           </ul>
 
