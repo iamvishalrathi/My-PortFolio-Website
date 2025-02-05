@@ -71,10 +71,10 @@ const Works = () => {
             clickable: true,
           }}
           autoplay={{
-            delay: 3000, // 3 seconds for each slide
+            delay: 2000,
             disableOnInteraction: false, // Keep autoplay even after user interaction
           }}
-          speed={2000}
+          speed={1000}  // Increase transition speed to 500ms
           breakpoints={{
             576: {
               slidesPerView: 1,
