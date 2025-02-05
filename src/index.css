@@ -7,19 +7,28 @@
   --section-background: #f5f8ff;
   --card-background: #ffffff;
   --border-color: #e0e0e0;
-  --title-color-dark: #333333; /* Example definition */
+  --title-color-dark: #333333;
+  /* Example definition */
 }
 
 body.dark-theme {
   /* Dark Theme Colors */
-  --body-color: #1c2130;  /* Main background */
-  --text-color: #d1d5db;  /* Comfortable reading text color */
-  --title-color: #ffffff;  /* Clear white for headings */
-  --container-color: #252b3b;  /* Slightly lighter than body */
-  --section-background: #212736;  /* Between body and container */
-  --card-background: #2a3142;  /* Elevated components */
-  --border-color: #313d4f;  /* Subtle borders */
-  --title-color-dark: #ffcc00; /* Example definition for dark theme */
+  --body-color: #1c2130;
+  /* Main background */
+  --text-color: #d1d5db;
+  /* Comfortable reading text color */
+  --title-color: #ffffff;
+  /* Clear white for headings */
+  --container-color: #252b3b;
+  /* Slightly lighter than body */
+  --section-background: #212736;
+  /* Between body and container */
+  --card-background: #2a3142;
+  /* Elevated components */
+  --border-color: #313d4f;
+  /* Subtle borders */
+  --title-color-dark: #ffcc00;
+  /* Example definition for dark theme */
 }
 
 body {

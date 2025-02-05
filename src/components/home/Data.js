@@ -4,10 +4,10 @@ const Data = ({ isDark }) => {
   return (
     <div className='home__data'>
       <h1 className='home__title'>Vishal Kumar
-        <img 
-          src={isDark ? '/v-white.png' : '/favicon.png'} 
-          alt='Vishal Kumar' 
-          className='home__title-img' 
+        <img
+          src={isDark ? '/v-white.png' : '/favicon.png'}
+          alt='Vishal Kumar'
+          className='home__title-img'
         />
       </h1>
       <h3 className='home__subtitle'>{`<h3> Full Stack Developer </h3>`}</h3>

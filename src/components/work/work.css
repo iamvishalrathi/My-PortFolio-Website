@@ -120,10 +120,12 @@
     justify-content: center;
     cursor: pointer;
     z-index: 10;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     &:hover {
         background-color: var(--button-hover-background-color);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -141,7 +143,7 @@ body.dark-theme {
 
 .bx {
     font-size: 18px;
-    /* Adjust icon size */
+    /* Ensure icon size is consistent */
 }
 
 .work__description {
