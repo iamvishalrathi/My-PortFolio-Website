@@ -1,4 +1,3 @@
-
 import './App.css';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
@@ -9,14 +8,31 @@ import Work from './components/work/Work';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
+import React, { useState, useEffect } from 'react';
 
 const App = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('selected-theme');
+    if (savedTheme === 'dark') {
+      setIsDark(true);
+      document.body.classList.add('dark-theme');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+    document.body.classList.toggle('dark-theme');
+    localStorage.setItem('selected-theme', isDark ? 'light' : 'dark');
+  };
+
   return (
     <>
-      <Header />
+      <Header isDark={isDark} toggleTheme={toggleTheme} />
 
       <main className='main'>
-        <Home />
+        <Home isDark={isDark} />
         <About />
         <Skills />
         <Qualification />

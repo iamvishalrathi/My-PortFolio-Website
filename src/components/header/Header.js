@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Header.css'
 
-const Header = () => {
+const Header = ({ isDark, toggleTheme }) => {
   window.addEventListener('scroll', function(){
     const header = document.querySelector('.header');
     if(this.scrollY >= 80) header.classList.add('scroll-header');
@@ -9,22 +9,14 @@ const Header = () => {
 })
   const [toggle, setToggle] = useState(false)
   const [activeNav, setActiveNav] = useState('#home')
-  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     // Check if user previously selected dark theme
     const savedTheme = localStorage.getItem('selected-theme');
     if (savedTheme === 'dark') {
-      setIsDark(true);
       document.body.classList.add('dark-theme');
     }
   }, []);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    document.body.classList.toggle('dark-theme');
-    localStorage.setItem('selected-theme', isDark ? 'light' : 'dark');
-  };
 
   return (
     <header className='header'>
