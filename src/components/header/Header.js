@@ -62,7 +62,7 @@ const Header = ({ isDark, toggleTheme }) => {
             </li>
             <li className='nav__item'>
               <div className='nav__link' onClick={toggleTheme}>
-                <i className={`bx ${isDark ? 'bx-sun' : 'bx-moon'}`}></i>
+                <i className={`bx ${isDark ? 'bx-sun' : 'bx-moon'}`}></i> {isDark ? 'Light' : 'Dark'}
               </div>
             </li>
           </ul>
