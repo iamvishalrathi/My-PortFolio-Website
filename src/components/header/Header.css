@@ -39,7 +39,8 @@
 
 .nav__icon,
 .nav__close,
-.nav__toggle {
+.nav__toggle,
+.theme_text {
     display: none;
 }
 
@@ -112,7 +113,8 @@
 
     .nav__icon,
     .nav__close,
-    .nav__toggle {
+    .nav__toggle,
+    .theme_text {
         display: block;
     }
 }
