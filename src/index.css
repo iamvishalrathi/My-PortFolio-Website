@@ -7,6 +7,7 @@
   --section-background: #f5f8ff;
   --card-background: #ffffff;
   --border-color: #e0e0e0;
+  --title-color-dark: #333333; /* Example definition */
 }
 
 body.dark-theme {
@@ -18,6 +19,7 @@ body.dark-theme {
   --section-background: #212736;  /* Between body and container */
   --card-background: #2a3142;  /* Elevated components */
   --border-color: #313d4f;  /* Subtle borders */
+  --title-color-dark: #ffcc00; /* Example definition for dark theme */
 }
 
 body {
