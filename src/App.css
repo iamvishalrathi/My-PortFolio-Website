@@ -144,6 +144,28 @@ img {
   gap: 1.5rem;
 }
 
+html,
+body {
+  overflow: auto;
+  /* Enables scrolling */
+  width: 100vw;
+  height: 100vh;
+  /* Ensures full page height */
+}
+
+/* Hide scrollbar for Chrome, Safari, and newer Edge browsers */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html,
+body {
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
