@@ -144,7 +144,6 @@ img {
   gap: 1.5rem;
 }
 
-html,
 body {
   overflow: auto;
   /* Enables scrolling */
@@ -154,7 +153,6 @@ body {
 }
 
 /* Hide scrollbar for Chrome, Safari, and newer Edge browsers */
-html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
