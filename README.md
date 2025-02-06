@@ -17,7 +17,7 @@ I'm a Full Stack Developer based in New Delhi and highly passionate about progra
 
 ## 🔍 Website Preview
 
-You can explore Podcastr live by visiting the website:
+You can explore PortFolio live by visiting the website:
 
 [**Vishal Kumar - Preview the PortFolio**](https://iamvishalkumar.me/)
 
