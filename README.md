@@ -19,10 +19,10 @@ I'm a Full Stack Developer based in New Delhi and highly passionate about progra
 
 You can explore Podcastr live by visiting the website:
 
-[**Podcastr - Preview the App**](https://my-podcastr.vercel.app/)
+[**Vishal Kumar - Preview the PortFolio**](https://iamvishalkumar.me/)
 
 ### 📸 Screenshot
-![image](https://github.com/iamvishalrathi/Podcastr/blob/main/public/sns.png)
+![image](https://github.com/iamvishalrathi/My-PortFolio-Website/blob/main/public/live.png)
 
 
 ## 📫 Get in Touch
