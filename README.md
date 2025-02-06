@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="https://github.com/iamvishalrathi/My-PortFolio-Website/blob/main/public/favicon.png" alt="Portfolio Logo" width="100" height="100"/>
+  <img src="https://github.com/iamvishalrathi/My-PortFolio-Website/blob/main/public/v-white.png" alt="Portfolio Logo" width="100" height="100"/>
   
   # Vishal Kumar's Portfolio
   
-  [![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://main--iamvishalkumar.netlify.app/)
+  [![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://iamvishalkumar.me/)
   [![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)](https://github.com/iamvishalrathi/My-PortFolio-Website)
 </div>
 
