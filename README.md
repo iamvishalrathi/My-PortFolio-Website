@@ -15,6 +15,16 @@ Welcome to my portfolio website! This site showcases my skills, projects, and ex
 
 I'm a Full Stack Developer based in New Delhi and highly passionate about programming, computer science and technology.
 
+## 🔍 Website Preview
+
+You can explore Podcastr live by visiting the website:
+
+[**Podcastr - Preview the App**](https://my-podcastr.vercel.app/)
+
+### 📸 Screenshot
+![image](https://github.com/iamvishalrathi/Podcastr/blob/main/public/sns.png)
+
+
 ## 📫 Get in Touch
 
 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
