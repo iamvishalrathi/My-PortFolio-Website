@@ -6,11 +6,11 @@ const Featured = () => {
     {
       id: 1,
       type: 'achievement',
-      title: "Web Development Certification",
-      platform: "Udemy",
+      title: "HackBlocks1.0",
+      platform: "BVCOE in collab with Microsoft Azure",
       date: "Feb 2025",
-      image: "certification.jpg",
-      link: "#"
+      image: "https://drive.google.com/file/d/1rC6_rZHC-Q6zfdq3tX4gBI1fELFvJkQo/view?usp=drive_link",
+      link: "https://www.linkedin.com/posts/iamvishalrathi_project-web3-blockchain-activity-7195300104231133184-3MkR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
       id: 2,
@@ -61,8 +61,8 @@ const Featured = () => {
             <div className="featured__content">
               <h3 className="featured__title">{item.title}</h3>
               <span className="featured__date">{item.date}</span>
-              <a href={item.link} className="featured__button" target="_blank" rel="noopener noreferrer">
-                View <i className="uil uil-arrow-right"></i>
+              <a href={item.link} target="_blank" className='featured__button'> View
+                <i className='bx bx-right-arrow-alt featured__button-icon'></i>
               </a>
             </div>
           </article>
