@@ -1,44 +1,58 @@
 import React from 'react';
 import './Featured.css';
 
+// If you want to add Google Drive images, you can follow this same pattern:
+
+// Get the file ID from your Google Drive link (it's the long string after /d/ in the sharing URL)
+// Use this format: https://drive.google.com/uc?export=view&id=YOUR_FILE_ID
+
 const Featured = () => {
   const featuredItems = [
     {
       id: 1,
       type: 'achievement',
-      title: "HackBlocks1.0",
-      platform: "BVCOE in collab with Microsoft Azure",
+      title: "Top 10 | HackBlocks1.0",
+      platform: "BVCOE & Microsoft Azure",
       date: "Feb 2025",
-      image: "https://drive.google.com/file/d/1rC6_rZHC-Q6zfdq3tX4gBI1fELFvJkQo/view?usp=drive_link",
+      image: "/featured/Hackblock1.0.jpg",
       link: "https://www.linkedin.com/posts/iamvishalrathi_project-web3-blockchain-activity-7195300104231133184-3MkR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
       id: 2,
       type: 'social',
-      title: "Latest Project Launch",
-      platform: "LinkedIn",
+      title: "GenAI BOOTCAMP",
+      platform: "Microsoft Azure",
       date: "Feb 2025",
-      image: "project.jpg",
-      link: "#"
+      image: "/featured/GenAI BOOTCAMP.png",
+      link: "https://www.linkedin.com/posts/iamvishalrathi_reskill-azuredevelopercommunity-generativeaibootcamp-activity-7194638808364060673-zqIL?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
       id: 3,
       type: 'achievement',
-      title: "Hackathon Winner",
-      platform: "TechFest 2025",
+      title: "3rd Position | Logic Maze",
+      platform: "TechCom MAIT",
       date: "Jan 2025",
-      image: "hackathon.jpg",
+      image: "/featured/Logic Maze.jpg",
       link: "#"
     },
     {
       id: 4,
       type: 'social',
-      title: "Open Source Contribution",
-      platform: "GitHub",
+      title: "UAS Bootcamp",
+      platform: "C-DAC",
       date: "Jan 2025",
-      image: "github.jpg",
-      link: "#"
-    }
+      image: "/featured/Drone_UAS Workshop.jpg",
+      link: "https://www.linkedin.com/posts/iamvishalrathi_uas-dronetechnology-capacitybuilding-activity-7232765162896666624-BWd7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
+    },
+    {
+      id: 5,
+      type: 'social',
+      title: "Kartavya Fest",
+      platform: "National Cadet Corps",
+      date: "Jan 2025",
+      image: "/featured/KARTAVYA'24.jpg",
+      link: "https://www.linkedin.com/posts/iamvishalrathi_mait-ncc-teamwork-activity-7187393601620905984-2e7z?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
+    },
   ];
 
   return (
