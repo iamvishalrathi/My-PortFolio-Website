@@ -13,34 +13,34 @@ const Featured = () => {
       type: 'achievement',
       title: "Top 10 | HackBlocks1.0",
       platform: "BVCOE & Microsoft Azure",
-      date: "Feb 2025",
+      date: "May 2024",
       image: "/featured/Hackblock1.0.jpg",
       link: "https://www.linkedin.com/posts/iamvishalrathi_project-web3-blockchain-activity-7195300104231133184-3MkR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
       id: 2,
-      type: 'social',
-      title: "GenAI BOOTCAMP",
-      platform: "Microsoft Azure",
-      date: "Feb 2025",
-      image: "/featured/GenAI BOOTCAMP.png",
-      link: "https://www.linkedin.com/posts/iamvishalrathi_reskill-azuredevelopercommunity-generativeaibootcamp-activity-7194638808364060673-zqIL?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
-    },
-    {
-      id: 3,
       type: 'achievement',
       title: "3rd Position | Logic Maze",
       platform: "TechCom MAIT",
-      date: "Jan 2025",
+      date: "March 2024",
       image: "/featured/Logic Maze.jpg",
-      link: "#"
+      link: "https://www.linkedin.com/posts/iamvishalrathi_logicmazecompetition-techcom-mait-activity-7176797454900633600-HgSm?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
+    },
+    {
+      id: 3,
+      type: 'social',
+      title: "GenAI BOOTCAMP",
+      platform: "Microsoft Azure",
+      date: "May 2024",
+      image: "/featured/GenAI BOOTCAMP.png",
+      link: "https://www.linkedin.com/posts/iamvishalrathi_reskill-azuredevelopercommunity-generativeaibootcamp-activity-7194638808364060673-zqIL?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
       id: 4,
       type: 'social',
       title: "UAS Bootcamp",
       platform: "C-DAC",
-      date: "Jan 2025",
+      date: "Aug 2024",
       image: "/featured/Drone_UAS Workshop.jpg",
       link: "https://www.linkedin.com/posts/iamvishalrathi_uas-dronetechnology-capacitybuilding-activity-7232765162896666624-BWd7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
@@ -49,7 +49,7 @@ const Featured = () => {
       type: 'social',
       title: "Kartavya Fest",
       platform: "National Cadet Corps",
-      date: "Jan 2025",
+      date: "March 2024",
       image: "/featured/KARTAVYA'24.jpg",
       link: "https://www.linkedin.com/posts/iamvishalrathi_mait-ncc-teamwork-activity-7187393601620905984-2e7z?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
