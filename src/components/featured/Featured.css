@@ -160,7 +160,6 @@
 
 .featured__view-more-btn:hover {
     background-color: var(--first-color);
-    color: #fff;
     transform: translateY(-0.25rem);
     box-shadow: 0 4px 12px rgba(var(--first-color-rgb), 0.2);
 }
