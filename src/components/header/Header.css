@@ -34,7 +34,8 @@
     font-size: var(--small-font-size);
     color: var(--title-color);
     font-weight: var(--font-medium);
-    transition: .3s;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .nav__icon,
@@ -47,6 +48,7 @@
 .active-link,
 .nav__link:hover {
     color: var(--title-color-dark);
+    transform: translateY(-2px);
 }
 
 .scroll-header {
@@ -117,6 +119,11 @@
     .theme_text {
         display: block;
     }
+
+    .nav__link:hover,
+    .active-link {
+        transform: scale(1.05);
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -139,4 +146,5 @@
 .nav__link i.bx-moon:hover,
 .nav__link i.bx-sun:hover {
     color: var(--first-color);
+    transform: rotate(15deg);
 }
