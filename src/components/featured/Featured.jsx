@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Featured.css';
 
 // If you want to add Google Drive images, you can follow this same pattern:
@@ -7,6 +7,9 @@ import './Featured.css';
 // Use this format: https://drive.google.com/uc?export=view&id=YOUR_FILE_ID
 
 const Featured = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [displayCount, setDisplayCount] = useState(4);
+
   const featuredItems = [
     {
       id: 1,
@@ -55,13 +58,30 @@ const Featured = () => {
     },
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 968) {
+        setDisplayCount(3);
+      } else {
+        setDisplayCount(4);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const visibleItems = showAll ? featuredItems : featuredItems.slice(0, displayCount);
+  const hasMoreItems = featuredItems.length > displayCount;
+
   return (
     <section className="featured section" id="featured">
       <h2 className="section__title">Featured</h2>
       <span className="section__subtitle">Achievements & Social Updates</span>
 
       <div className="featured__container container grid">
-        {featuredItems.map((item) => (
+        {visibleItems.map((item) => (
           <article className="featured__card" key={item.id}>
             <div className="featured__image">
               <img src={item.image} alt={item.title} />
@@ -82,6 +102,18 @@ const Featured = () => {
           </article>
         ))}
       </div>
+
+      {hasMoreItems && (
+        <div className="featured__view-more">
+          <button 
+            className="featured__view-more-btn" 
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? 'Show Less' : 'View More'}
+            <i className={`bx ${showAll ? 'bx-chevron-up' : 'bx-chevron-down'} featured__view-more-icon`}></i>
+          </button>
+        </div>
+      )}
     </section>
   );
 };
