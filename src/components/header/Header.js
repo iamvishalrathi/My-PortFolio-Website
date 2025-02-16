@@ -21,7 +21,7 @@ const Header = ({ isDark, toggleTheme }) => {
   return (
     <header className='header'>
       <nav className='nav container'>
-        <a href='index.html' className='nav__logo'>Vishal Kumar</a>
+        <a href='#home' className='nav__logo'>Vishal Kumar</a>
         <div className={toggle ? 'nav__menu show-menu' : 'nav__menu'}>
           <ul className='nav__list grid'>
             <li>
