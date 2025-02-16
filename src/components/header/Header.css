@@ -36,6 +36,7 @@
     font-weight: var(--font-medium);
     transition: all 0.3s ease;
     position: relative;
+    row-gap: 0.25rem;
 }
 
 .nav__icon,
@@ -123,6 +124,10 @@
     .nav__link:hover,
     .active-link {
         transform: scale(1.05);
+    }
+
+    i.bx-moon,i.bx-sun{
+        padding: 0.2rem;
     }
 }
 

@@ -67,8 +67,8 @@ const Header = ({ isDark, toggleTheme }) => {
               </a>
             </li>
             <li>
-              <div className='nav__link' onClick={() => {setActiveNav('#theme'); toggleTheme()}}>
-                <i className={`uil bx ${isDark ? 'bx-sun' : 'bx-moon'}`}></i>
+              <div className='theme-toggle nav__link' onClick={() => {setActiveNav('#theme'); toggleTheme()}}>
+                <i className={`bx ${isDark ? 'bx-sun' : 'bx-moon'}`}></i>
                 <span className="nav_link theme_text">{isDark ? 'Light' : 'Dark'}</span>
               </div>
             </li>
