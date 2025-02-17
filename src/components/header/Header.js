@@ -4,6 +4,8 @@ import './Header.css'
 const Header = ({ isDark, toggleTheme }) => {
   const [toggle, setToggle] = useState(false)
   const [activeNav, setActiveNav] = useState('#home')
+  const [isScrolling, setIsScrolling] = useState(true)
+  const [showThemeOption, setShowThemeOption] = useState(true)
 
   useEffect(() => {
     const handleHeaderScroll = () => {
@@ -16,6 +18,8 @@ const Header = ({ isDark, toggleTheme }) => {
 
   useEffect(() => {
     const handleNavScroll = () => {
+      if (!isScrolling) return
+      
       const sections = ['home', 'about', 'skills', 'qualifications', 'portfolio', 'featured', 'contact']
       const scrollY = window.pageYOffset
 
@@ -35,13 +39,32 @@ const Header = ({ isDark, toggleTheme }) => {
     window.addEventListener('scroll', handleNavScroll)
     handleNavScroll()
     return () => window.removeEventListener('scroll', handleNavScroll)
-  }, [])
+  }, [isScrolling])
 
   useEffect(() => {
     if (localStorage.getItem('selected-theme') === 'dark') {
       document.body.classList.add('dark-theme')
     }
   }, [])
+
+  const handleNavClick = (href) => {
+    setIsScrolling(false)
+    setActiveNav(href)
+    // Hide theme option in mobile view when clicking nav links
+    if (window.innerWidth <= 768 && href !== '#theme') {
+      setShowThemeOption(false)
+      // Close mobile menu after navigation
+      setToggle(false)
+    }
+    // Re-enable scrolling after navigation animation completes
+    setTimeout(() => setIsScrolling(true), 1000)
+  }
+
+  const handleThemeClick = () => {
+    handleNavClick('#theme')
+    toggleTheme()
+    setShowThemeOption(true)
+  }
 
   const navLinks = [
     { href: '#home', icon: 'estate', text: 'Home' },
@@ -63,15 +86,15 @@ const Header = ({ isDark, toggleTheme }) => {
               <li key={href}>
                 <a
                   href={href}
-                  onClick={() => setActiveNav(href)}
+                  onClick={() => handleNavClick(href)}
                   className={`nav__link ${activeNav === href ? 'active-link' : ''}`}
                 >
                   <i className={`uil uil-${icon} nav__icon`}></i> {text}
                 </a>
               </li>
             ))}
-            <li>
-              <div className='theme-toggle nav__link' onClick={toggleTheme}>
+            <li className={`theme-option ${!showThemeOption ? 'theme-hidden' : ''}`}>
+              <div className='theme-toggle nav__link' onClick={handleThemeClick}>
                 <i className={`bx ${isDark ? 'bx-sun' : 'bx-moon'}`}></i>
                 <span className="nav_link theme_text">{isDark ? 'Light' : 'Dark'}</span>
               </div>
@@ -80,7 +103,10 @@ const Header = ({ isDark, toggleTheme }) => {
 
           <i className='uil uil-times nav__close' onClick={() => setToggle(!toggle)}></i>
         </div>
-        <div className='nav__toggle' onClick={() => setToggle(!toggle)}>
+        <div className='nav__toggle' onClick={() => {
+          setToggle(!toggle)
+          setShowThemeOption(true)
+        }}>
           <i className='uil uil-apps'></i>
         </div>
       </nav>

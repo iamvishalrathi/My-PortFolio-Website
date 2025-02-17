@@ -50,6 +50,18 @@
 .nav__link:hover {
     color: var(--title-color-dark);
     transform: translateY(-2px);
+    position: relative;
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--title-color-dark);
+    border-radius: 2px;
 }
 
 .scroll-header {
@@ -124,10 +136,26 @@
     .nav__link:hover,
     .active-link {
         transform: scale(1.05);
+        background-color: var(--title-color-dark);
+        color: var(--container-color);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .active-link::after {
+        display: none;
     }
 
     i.bx-moon,i.bx-sun{
         padding: 0.2rem;
+    }
+
+    .theme-hidden {
+        display: none;
+    }
+
+    .theme-option {
+        transition: all 0.3s ease;
     }
 }
 
