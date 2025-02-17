@@ -5,17 +5,20 @@ const educationData = [
   {
     title: "BTech CSE",
     subtitle: "Maharaja Agrasen Institute of Technology, Delhi",
-    period: "2022-2026"
+    period: "2022-2026",
+    cgpa: "8.398 CGPA"
   },
   {
     title: "Senior Secondary School",
     subtitle: "Kendriya Vidyalaya, Delhi",
-    period: "2020-2022"
+    period: "2020-2022",
+    cgpa: "94% in CBSE Board"
   },
   {
     title: "Secondary School",
     subtitle: "D.A.V. Centenary Public School, Delhi",
-    period: "2014-2020"
+    period: "2014-2020",
+    cgpa: "93.4% in CBSE Board"
   }
 ];
 
@@ -23,17 +26,20 @@ const experienceData = [
   {
     title: "Full Stack Developer",
     subtitle: "Truxie Startup",
-    period: "Nov 2024 - Present"
+    period: "Nov 2024 - Present",
+    role: "Intern"
   },
   {
-    title: "NCC Corporal",
+    title: "National Cadet Corps",
     subtitle: "Maharaja Agrasen Institute of Technology, Delhi",
-    period: "2022-2025"
+    period: "2022-2025",
+    role: "Corporal"
   },
   {
     title: "Full Stack Developer",
     subtitle: "CoderOne",
-    period: "Jun 2024 - Aug 2024"
+    period: "Jun 2024 - Aug 2024",
+    role: "Intern"
   }
 ];
 
@@ -54,6 +60,12 @@ const Qualification = () => {
             <div className='qualification__calender'>
               <i className='uil uil-calendar-alt'></i> {data.period}
             </div>
+            {data.cgpa && (
+              <div className='qualification__cgpa'>
+                <i className='uil uil-award'></i> {data.cgpa}
+              </div>
+            )}
+            {data.role && <p className='qualification__description'>{data.role}</p>}
           </div>
           <div>
             <span className='qualification__rounder'></span>
@@ -73,6 +85,12 @@ const Qualification = () => {
             <div className='qualification__calender'>
               <i className='uil uil-calendar-alt'></i> {data.period}
             </div>
+            {data.cgpa && (
+              <div className='qualification__cgpa'>
+                <i className='uil uil-award'></i> {data.cgpa}
+              </div>
+            )}
+            {data.role && <p className='qualification__description'>{data.role}</p>}
           </div>
         </>
       )}
