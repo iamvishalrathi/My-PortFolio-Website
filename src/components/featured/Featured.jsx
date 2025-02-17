@@ -101,7 +101,7 @@ const Featured = () => {
               </div>
               {item.pinned && (
                 <div className="featured__pin">
-                  <i className="uil uil-thumbtack"></i>
+                  <i className="uil uil-bookmark"></i>
                 </div>
               )}
             </div>
