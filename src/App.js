@@ -8,6 +8,7 @@ import Work from './components/work/Work';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
+import Featured from './components/featured/Featured';
 import React, { useState, useEffect } from 'react';
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
         <Skills />
         <Qualification />
         <Work />
+        <Featured />
         <Contact />
       </main>
 

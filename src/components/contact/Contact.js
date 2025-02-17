@@ -36,7 +36,8 @@ const Contact = () => {
               <h3 className='contact__card-title'>Twitter</h3>
               <span className='contact__card-data'>@iamvishalrathi1</span>
               <a href='https://twitter.com/iamvishalrathi1' target="_blank" className='contact__button'> Write me
-                <i className='bx bx-right-arrow-alt contact__button-icon'></i></a>
+                <i className='bx bx-right-arrow-alt contact__button-icon'></i>
+              </a>
             </div>
 
             {/* <div className='contact__card'>

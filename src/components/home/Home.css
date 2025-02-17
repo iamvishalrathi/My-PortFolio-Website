@@ -126,6 +126,11 @@
 .home__scroll-arrow {
     font-size: 1.25rem;
     color: var(--title-color);
+    transition: 0.3s;
+}
+
+.home__scroll:hover .home__scroll-arrow{
+    transform: translateY(0.25rem);
 }
 
 @media screen and (max-width: 992px) {

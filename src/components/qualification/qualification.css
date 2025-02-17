@@ -81,6 +81,28 @@
     transform: translate(6px, -7px);
 }
 
+.qualification__description {
+    font-size: var(--small-font-size);
+    margin-top: var(--mb-0-25);
+    margin-bottom: var(--mb-0-75);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qualification__cgpa {
+    font-size: var(--small-font-size);
+    margin-top: var(--mb-0-25);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.qualification__cgpa i {
+    font-size: 1rem;
+}
+
 @media screen and (max-width: 992px) {
     .qualification__container {
         margin-left: auto;
