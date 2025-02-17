@@ -11,6 +11,33 @@ const Header = ({ isDark, toggleTheme }) => {
   const [activeNav, setActiveNav] = useState('#home')
 
   useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'skills', 'qualifications', 'portfolio', 'featured', 'contact'];
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionElement = document.getElementById(section);
+        if (sectionElement) {
+          const sectionHeight = sectionElement.offsetHeight;
+          const sectionTop = sectionElement.offsetTop - 50;
+          
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            setActiveNav(`#${section}`);
+          }
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check
+    handleScroll();
+
+    // Cleanup
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
     // Check if user previously selected dark theme
     const savedTheme = localStorage.getItem('selected-theme');
     if (savedTheme === 'dark') {
