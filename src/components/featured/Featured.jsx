@@ -13,6 +13,7 @@ const Featured = () => {
       platform: "BVCOE & Microsoft Azure",
       date: "May 2024",
       image: "/featured/Hackblock1.0.jpg",
+      pinned: true,
       link: "https://www.linkedin.com/posts/iamvishalrathi_project-web3-blockchain-activity-7195300104231133184-3MkR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
@@ -22,6 +23,7 @@ const Featured = () => {
       platform: "TechCom MAIT",
       date: "March 2024",
       image: "/featured/Logic Maze.jpg",
+      pinned: true,
       link: "https://www.linkedin.com/posts/iamvishalrathi_logicmazecompetition-techcom-mait-activity-7176797454900633600-HgSm?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
@@ -31,6 +33,7 @@ const Featured = () => {
       platform: "Microsoft Azure",
       date: "May 2024",
       image: "/featured/GenAI BOOTCAMP.png",
+      pinned: false,
       link: "https://www.linkedin.com/posts/iamvishalrathi_reskill-azuredevelopercommunity-generativeaibootcamp-activity-7194638808364060673-zqIL?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
@@ -40,6 +43,7 @@ const Featured = () => {
       platform: "C-DAC",
       date: "Aug 2024",
       image: "/featured/Drone_UAS Workshop.jpg",
+      pinned: false,
       link: "https://www.linkedin.com/posts/iamvishalrathi_uas-dronetechnology-capacitybuilding-activity-7232765162896666624-BWd7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
@@ -49,9 +53,14 @@ const Featured = () => {
       platform: "National Cadet Corps",
       date: "March 2024",
       image: "/featured/KARTAVYA'24.jpg",
+      pinned: false,
       link: "https://www.linkedin.com/posts/iamvishalrathi_mait-ncc-teamwork-activity-7187393601620905984-2e7z?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
   ].sort((a, b) => {
+    // First sort by pinned status
+    if (a.pinned && !b.pinned) return -1;
+    if (!a.pinned && b.pinned) return 1;
+    // Then sort by date for items with the same pinned status
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
     return dateB - dateA;
@@ -90,6 +99,11 @@ const Featured = () => {
                 }`}></i>
                 {item.platform}
               </div>
+              {item.pinned && (
+                <div className="featured__pin">
+                  <i className="uil uil-thumbtack"></i>
+                </div>
+              )}
             </div>
             <div className="featured__content">
               <h3 className="featured__title">{item.title}</h3>
