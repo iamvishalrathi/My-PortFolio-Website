@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Featured.css';
 
-// If you want to add Google Drive images, you can follow this same pattern:
-
-// Get the file ID from your Google Drive link (it's the long string after /d/ in the sharing URL)
-// Use this format: https://drive.google.com/uc?export=view&id=YOUR_FILE_ID
-
 const Featured = () => {
   const [showAll, setShowAll] = useState(false);
   const [displayCount, setDisplayCount] = useState(4);
@@ -56,7 +51,11 @@ const Featured = () => {
       image: "/featured/KARTAVYA'24.jpg",
       link: "https://www.linkedin.com/posts/iamvishalrathi_mait-ncc-teamwork-activity-7187393601620905984-2e7z?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
-  ];
+  ].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB - dateA;
+  });
 
   useEffect(() => {
     const handleResize = () => {
