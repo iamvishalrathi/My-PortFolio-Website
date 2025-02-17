@@ -83,9 +83,12 @@
 
 .qualification__description {
     font-size: var(--small-font-size);
-    margin-top: var(--mb-0-5);
+    margin-top: var(--mb-0-25);
+    margin-bottom: var(--mb-0-75);
     color: var(--text-color);
-    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .qualification__cgpa {
@@ -97,7 +100,7 @@
 }
 
 .qualification__cgpa i {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 @media screen and (max-width: 992px) {

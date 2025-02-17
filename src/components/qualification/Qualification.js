@@ -56,11 +56,15 @@ const Qualification = () => {
         <>
           <div>
             <h3 className='qualification__title'>{data.title}</h3>
-            {data.role && <p className='qualification__description'>{data.role}</p>}
             <span className='qualification__subtitle'>{data.subtitle}</span>
             <div className='qualification__calendar'>
               <i className='uil uil-calendar-alt'></i> {data.period}
             </div>
+            {data.role && (
+              <p className='qualification__description'>
+                <i className='uil uil-user'></i> {data.role}
+              </p>
+            )}
             {data.cgpa && (
               <div className='qualification__cgpa'>
                 <i className='uil uil-award'></i> {data.cgpa}
@@ -81,11 +85,15 @@ const Qualification = () => {
           </div>
           <div>
             <h3 className='qualification__title'>{data.title}</h3>
-            {data.role && <p className='qualification__description'>{data.role}</p>}
             <span className='qualification__subtitle'>{data.subtitle}</span>
             <div className='qualification__calendar'>
               <i className='uil uil-calendar-alt'></i> {data.period}
             </div>
+            {data.role && (
+              <p className='qualification__description'>
+                <i className='uil uil-user'></i> {data.role}
+              </p>
+            )}
             {data.cgpa && (
               <div className='qualification__cgpa'>
                 <i className='uil uil-award'></i> {data.cgpa}
