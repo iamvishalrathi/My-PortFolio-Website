@@ -31,7 +31,7 @@ const experienceData = [
   },
   {
     title: "National Cadet Corps",
-    subtitle: "Maharaja Agrasen Institute of Technology, Delhi",
+    subtitle: "MAIT",
     period: "2022-2025",
     role: "Corporal"
   },
@@ -56,8 +56,9 @@ const Qualification = () => {
         <>
           <div>
             <h3 className='qualification__title'>{data.title}</h3>
+            {data.role && <p className='qualification__description'>{data.role}</p>}
             <span className='qualification__subtitle'>{data.subtitle}</span>
-            <div className='qualification__calender'>
+            <div className='qualification__calendar'>
               <i className='uil uil-calendar-alt'></i> {data.period}
             </div>
             {data.cgpa && (
@@ -65,7 +66,6 @@ const Qualification = () => {
                 <i className='uil uil-award'></i> {data.cgpa}
               </div>
             )}
-            {data.role && <p className='qualification__description'>{data.role}</p>}
           </div>
           <div>
             <span className='qualification__rounder'></span>
@@ -81,8 +81,9 @@ const Qualification = () => {
           </div>
           <div>
             <h3 className='qualification__title'>{data.title}</h3>
+            {data.role && <p className='qualification__description'>{data.role}</p>}
             <span className='qualification__subtitle'>{data.subtitle}</span>
-            <div className='qualification__calender'>
+            <div className='qualification__calendar'>
               <i className='uil uil-calendar-alt'></i> {data.period}
             </div>
             {data.cgpa && (
@@ -90,7 +91,6 @@ const Qualification = () => {
                 <i className='uil uil-award'></i> {data.cgpa}
               </div>
             )}
-            {data.role && <p className='qualification__description'>{data.role}</p>}
           </div>
         </>
       )}

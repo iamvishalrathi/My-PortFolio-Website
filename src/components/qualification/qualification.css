@@ -91,16 +91,13 @@
 .qualification__cgpa {
     font-size: var(--small-font-size);
     margin-top: var(--mb-0-25);
-    color: var(--title-color);
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    font-weight: var(--font-medium);
 }
 
 .qualification__cgpa i {
     font-size: 1.1rem;
-    color: var(--title-color);
 }
 
 @media screen and (max-width: 992px) {
