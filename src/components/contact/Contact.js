@@ -1,7 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './contact.css'
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [error, setError] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+    // Clear error when user starts typing
+    if (error) setError('');
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Name validation
+    if (!formData.name.trim()) {
+      setError('Name is required');
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!formData.email.trim() || !emailRegex.test(formData.email)) {
+      setError('Please enter a valid email address');
+      return;
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      setError('Message is required');
+      return;
+    }
+
+    // If all validations pass, submit the form
+    const form = e.target;
+    form.submit();
+  };
+
   return (
     <section className='contact section' id='contact'>
       <h2 className='section__title'>Get in touch</h2>
@@ -51,24 +95,48 @@ const Contact = () => {
         <div className='contact__content'>
           {/* <h3 className='contact__title'>Write me your message</h3> */}
 
-          <form className='contact__form' action="https://formspree.io/f/xovjwvqz"
-            method="POST">
+          <form 
+            className='contact__form' 
+            action="https://formspree.io/f/xovjwvqz"
+            method="POST"
+            onSubmit={handleSubmit}
+          >
+            {error && <div className='contact__form-error'>{error}</div>}
+            
             <div className='contact__form-div'>
               <label className='contact__form-tag'>Name</label>
-              <input type='text' name='name' className='contact__form-input'
-                placeholder='Name' />
+              <input 
+                type='text' 
+                name='name' 
+                className='contact__form-input'
+                placeholder='Name' 
+                value={formData.name}
+                onChange={handleChange}
+              />
             </div>
 
             <div className='contact__form-div'>
               <label className='contact__form-tag'>Email</label>
-              <input type='email' name='email' className='contact__form-input'
-                placeholder='Email' />
+              <input 
+                name='email' 
+                className='contact__form-input'
+                placeholder='Email' 
+                value={formData.email}
+                onChange={handleChange}
+              />
             </div>
 
             <div className='contact__form-div contact__form-area'>
               <label className='contact__form-tag'>Message</label>
-              <textarea name='message' cols='30' rows='7' className='contact__form-input'
-                placeholder='Message'></textarea>
+              <textarea 
+                name='message' 
+                cols='30' 
+                rows='7' 
+                className='contact__form-input'
+                placeholder='Message'
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
             </div>
             <button type='submit' className='button button--flex'>Send Message
               <svg
