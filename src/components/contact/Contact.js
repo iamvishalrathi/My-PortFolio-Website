@@ -9,6 +9,43 @@ const Contact = () => {
   });
   const [error, setError] = useState('');
 
+  // Spam detection functions
+  const isSpamContent = (text) => {
+    // Convert to lowercase for case-insensitive checking
+    const lowerText = text.toLowerCase();
+    
+    // Check for spam keywords
+    const spamKeywords = [
+      'casino', 'viagra', 'lottery', 'prize', 'winner', 
+      'buy now', 'cheap', 'discount', 'free offer', 'loan',
+      'bitcoin', 'crypto', 'investment opportunity'
+    ];
+    
+    if (spamKeywords.some(keyword => lowerText.includes(keyword))) {
+      return true;
+    }
+
+    // Check for excessive URLs
+    const urlCount = (text.match(/https?:\/\/[^\s]+/g) || []).length;
+    if (urlCount > 3) {
+      return true;
+    }
+
+    // Check for repeated characters (possible spam pattern)
+    const repeatedCharsPattern = /(.)\1{4,}/;
+    if (repeatedCharsPattern.test(text)) {
+      return true;
+    }
+
+    // Check for excessive capitalization
+    const upperCasePercentage = text.split('').filter(char => char.match(/[A-Z]/)).length / text.length;
+    if (upperCasePercentage > 0.5 && text.length > 10) {
+      return true;
+    }
+
+    return false;
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -38,6 +75,30 @@ const Contact = () => {
     // Message validation
     if (!formData.message.trim()) {
       setError('Message is required');
+      return;
+    }
+
+    // Spam detection
+    if (isSpamContent(formData.name)) {
+      setError('Please enter a valid name without spam content');
+      return;
+    }
+
+    if (isSpamContent(formData.message)) {
+      setError('Your message appears to contain spam content. Please revise and try again.');
+      return;
+    }
+
+    // Additional spam checks
+    // Check message length (too short might be spam)
+    if (formData.message.trim().length < 10) {
+      setError('Please provide a more detailed message');
+      return;
+    }
+
+    // Check for message/name ratio (spam often has very long messages with short names)
+    if (formData.message.length > 1000 && formData.name.length < 3) {
+      setError('Please provide a valid name');
       return;
     }
 
