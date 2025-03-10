@@ -62,7 +62,7 @@ const Featured = () => {
       title: "LogiMat India 2025",
       platform: "Truxie Internship",
       date: "February 2025",
-      image: "/featured/LogiMat'25.jpg",
+      image: "/featured/Logimat'25.jpg",
       pinned: true,
       link: "https://www.linkedin.com/posts/iamvishalrathi_logimatindia2025-logimat-logistics-activity-7302000150569177088-Cy0k?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
