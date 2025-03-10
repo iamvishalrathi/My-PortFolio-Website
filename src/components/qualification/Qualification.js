@@ -30,22 +30,28 @@ const experienceData = [
     role: "Intern"
   },
   {
+    title: "Full Stack Developer",
+    subtitle: "CoderOne",
+    period: "Jun 2024 - Aug 2024",
+    role: "Intern"
+  },
+  {
+    title: "Startup Sphere Society",
+    subtitle: "MAIT",
+    period: "2022-2026",
+    role: "Tech Department"
+  },
+  {
     title: "National Cadet Corps",
     subtitle: "MAIT",
     period: "2022-2025",
     role: "Corporal"
   },
-  {
-    title: "Full Stack Developer",
-    subtitle: "CoderOne",
-    period: "Jun 2024 - Aug 2024",
-    role: "Intern"
-  }
 ];
 
 const Qualification = () => {
   const [toggleState, setToggleState] = useState(2);
-  
+
   const toggleTab = (index) => {
     setToggleState(index);
   };
@@ -112,7 +118,7 @@ const Qualification = () => {
 
       <div className='qualification__container container'>
         <div className='qualification__tabs'>
-          <div 
+          <div
             className={`qualification__button ${toggleState === 1 ? 'qualification__active' : ''} button--flex`}
             onClick={() => toggleTab(1)}
           >
@@ -120,7 +126,7 @@ const Qualification = () => {
             {"  "}Education
           </div>
 
-          <div 
+          <div
             className={`qualification__button ${toggleState === 2 ? 'qualification__active' : ''} button--flex`}
             onClick={() => toggleTab(2)}
           >
@@ -131,9 +137,9 @@ const Qualification = () => {
         <div className='qualification__sections'>
           <div className={`qualification__content ${toggleState === 1 ? 'qualification__content-active' : ''}`}>
             {educationData.map((item, index) => (
-              <QualificationItem 
-                key={index} 
-                data={item} 
+              <QualificationItem
+                key={index}
+                data={item}
                 index={index}
                 total={educationData.length}
               />
@@ -142,9 +148,9 @@ const Qualification = () => {
 
           <div className={`qualification__content ${toggleState === 2 ? 'qualification__content-active' : ''}`}>
             {experienceData.map((item, index) => (
-              <QualificationItem 
-                key={index} 
-                data={item} 
+              <QualificationItem
+                key={index}
+                data={item}
                 index={index}
                 total={experienceData.length}
               />

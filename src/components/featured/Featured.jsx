@@ -56,6 +56,16 @@ const Featured = () => {
       pinned: false,
       link: "https://www.linkedin.com/posts/iamvishalrathi_mait-ncc-teamwork-activity-7187393601620905984-2e7z?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
+    {
+      id: 6,
+      type: 'social',
+      title: "LogiMat India 2025",
+      platform: "Truxie Internship",
+      date: "February 2025",
+      image: "/featured/LogiMat'25.jpg",
+      pinned: true,
+      link: "https://www.linkedin.com/posts/iamvishalrathi_logimatindia2025-logimat-logistics-activity-7302000150569177088-Cy0k?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
+    },
   ].sort((a, b) => {
     // First sort by pinned status
     if (a.pinned && !b.pinned) return -1;
@@ -94,9 +104,8 @@ const Featured = () => {
             <div className="featured__image">
               <img src={item.image} alt={item.title} />
               <div className="featured__platform">
-                <i className={`uil ${
-                  item.type === 'social' ? 'uil-share-alt' : 'uil-award'
-                }`}></i>
+                <i className={`uil ${item.type === 'social' ? 'uil-share-alt' : 'uil-award'
+                  }`}></i>
                 {item.platform}
               </div>
               {item.pinned && (
@@ -118,8 +127,8 @@ const Featured = () => {
 
       {hasMoreItems && (
         <div className="featured__view-more">
-          <button 
-            className="featured__view-more-btn" 
+          <button
+            className="featured__view-more-btn"
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? 'Show Less' : 'View More'}
