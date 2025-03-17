@@ -41,10 +41,12 @@
     padding: 0 0.3rem;
     border-radius: 0.5rem;
     display: inline-flex;
+    transition: transform 0.3s ease, background-color 0.3s;
 }
 
 .footer__social-icon:hover {
     background-color: var(--title-color-dark);
+    transform: scale(1.2);
 }
 
 .footer__copy {
