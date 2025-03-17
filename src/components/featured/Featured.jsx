@@ -117,7 +117,7 @@ const Featured = () => {
             <div className="featured__content">
               <h3 className="featured__title">{item.title}</h3>
               <span className="featured__date">{item.date}</span>
-              <a href={item.link} target="_blank" className='featured__button'> View
+              <a href={item.link} target="_blank" rel="noreferrer" className='featured__button'> View
                 <i className='bx bx-right-arrow-alt featured__button-icon'></i>
               </a>
             </div>
