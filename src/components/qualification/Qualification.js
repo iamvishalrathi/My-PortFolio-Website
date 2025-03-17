@@ -70,39 +70,48 @@ const achievementsData = [
   },
 ];
 
+// Define tabs data to make it more maintainable
+const tabsData = [
+  { id: 1, name: "Education", icon: "uil-graduation-cap", data: educationData },
+  { id: 2, name: "Experience", icon: "uil-briefcase-alt", data: experienceData },
+  { id: 3, name: "Achievements", icon: "uil-trophy", data: achievementsData }
+];
+
 const Qualification = () => {
   const [toggleState, setToggleState] = useState(2);
 
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
+  // Content component to avoid repetition
+  const QualificationContent = ({ data }) => (
+    <div>
+      <h3 className='qualification__title'>{data.title}</h3>
+      <span className='qualification__subtitle'>{data.subtitle}</span>
+      <div className='qualification__calendar'>
+        <i className='uil uil-calendar-alt'></i> {data.period}
+      </div>
+      {data.role && (
+        <p className='qualification__description'>
+          <i className='uil uil-user'></i> {data.role}
+        </p>
+      )}
+      {data.cgpa && (
+        <div className='qualification__cgpa'>
+          <i className='uil uil-award'></i> {data.cgpa}
+        </div>
+      )}
+      {data.description && (
+        <div className='qualification__description'>
+          <i className='uil uil-trophy'></i>{data.description}
+        </div>
+      )}
+    </div>
+  );
 
+  // Simplified QualificationItem
   const QualificationItem = ({ data, index, total }) => (
     <div className='qualification__data'>
       {index % 2 === 0 ? (
         <>
-          <div>
-            <h3 className='qualification__title'>{data.title}</h3>
-            <span className='qualification__subtitle'>{data.subtitle}</span>
-            <div className='qualification__calendar'>
-              <i className='uil uil-calendar-alt'></i> {data.period}
-            </div>
-            {data.role && (
-              <p className='qualification__description'>
-                <i className='uil uil-user'></i> {data.role}
-              </p>
-            )}
-            {data.cgpa && (
-              <div className='qualification__cgpa'>
-                <i className='uil uil-award'></i> {data.cgpa}
-              </div>
-            )}
-            {data.description && (
-              <div className='qualification__description'>
-                <i className='uil uil-trophy'></i> {data.description}
-              </div>
-            )}
-          </div>
+          <QualificationContent data={data} />
           <div>
             <span className='qualification__rounder'></span>
             {index !== total - 1 && <span className='qualification__line'></span>}
@@ -115,28 +124,7 @@ const Qualification = () => {
             <span className='qualification__rounder'></span>
             {index !== total - 1 && <span className='qualification__line'></span>}
           </div>
-          <div>
-            <h3 className='qualification__title'>{data.title}</h3>
-            <span className='qualification__subtitle'>{data.subtitle}</span>
-            <div className='qualification__calendar'>
-              <i className='uil uil-calendar-alt'></i> {data.period}
-            </div>
-            {data.role && (
-              <p className='qualification__description'>
-                <i className='uil uil-user'></i> {data.role}
-              </p>
-            )}
-            {data.cgpa && (
-              <div className='qualification__cgpa'>
-                <i className='uil uil-award'></i> {data.cgpa}
-              </div>
-            )}
-            {data.description && (
-              <div className='qualification__description'>
-                <i className='uil uil-trophy'></i> {data.description}
-              </div>
-            )}
-          </div>
+          <QualificationContent data={data} />
         </>
       )}
     </div>
@@ -149,62 +137,33 @@ const Qualification = () => {
 
       <div className='qualification__container container'>
         <div className='qualification__tabs'>
-          <div
-            className={`qualification__button ${toggleState === 1 ? 'qualification__active' : ''} button--flex`}
-            onClick={() => toggleTab(1)}
-          >
-            <i className='uil uil-graduation-cap qualification__icon'></i>
-            {"  "}Education
-          </div>
-
-          <div
-            className={`qualification__button ${toggleState === 2 ? 'qualification__active' : ''} button--flex`}
-            onClick={() => toggleTab(2)}
-          >
-            <i className='uil uil-briefcase-alt qualification__icon'></i>{"  "}Experience
-          </div>
-
-          <div
-            className={`qualification__button ${toggleState === 3 ? 'qualification__active' : ''} button--flex`}
-            onClick={() => toggleTab(3)}
-          >
-            <i className='uil uil-trophy qualification__icon'></i>{"  "}Achievements
-          </div>
+          {tabsData.map(tab => (
+            <div
+              key={tab.id}
+              className={`qualification__button ${toggleState === tab.id ? 'qualification__active' : ''} button--flex`}
+              onClick={() => setToggleState(tab.id)}
+            >
+              <i className={`uil ${tab.icon} qualification__icon`}></i>{"  "}{tab.name}
+            </div>
+          ))}
         </div>
 
         <div className='qualification__sections'>
-          <div className={`qualification__content ${toggleState === 1 ? 'qualification__content-active' : ''}`}>
-            {educationData.map((item, index) => (
-              <QualificationItem
-                key={index}
-                data={item}
-                index={index}
-                total={educationData.length}
-              />
-            ))}
-          </div>
-
-          <div className={`qualification__content ${toggleState === 2 ? 'qualification__content-active' : ''}`}>
-            {experienceData.map((item, index) => (
-              <QualificationItem
-                key={index}
-                data={item}
-                index={index}
-                total={experienceData.length}
-              />
-            ))}
-          </div>
-
-          <div className={`qualification__content ${toggleState === 3 ? 'qualification__content-active' : ''}`}>
-            {achievementsData.map((item, index) => (
-              <QualificationItem
-                key={index}
-                data={item}
-                index={index}
-                total={achievementsData.length}
-              />
-            ))}
-          </div>
+          {tabsData.map(tab => (
+            <div
+              key={tab.id}
+              className={`qualification__content ${toggleState === tab.id ? 'qualification__content-active' : ''}`}
+            >
+              {tab.data.map((item, index) => (
+                <QualificationItem
+                  key={index}
+                  data={item}
+                  index={index}
+                  total={tab.data.length}
+                />
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>

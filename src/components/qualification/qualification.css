@@ -62,7 +62,10 @@
 }
 
 .qualification__calendar {
+    display: flex;
+    align-items: center;
     font-size: var(--small-font-size);
+    gap: 0.5rem;
 }
 
 .qualification__rounder {
@@ -130,6 +133,6 @@
 @media screen and (max-width: 350px) {
     .qualification__data {
         gap: 0.5rem;
-        
+
     }
 }

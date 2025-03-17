@@ -96,7 +96,7 @@ const Featured = () => {
   return (
     <section className="featured section" id="featured">
       <h2 className="section__title">Featured</h2>
-      <span className="section__subtitle">Achievements & Social Updates</span>
+      <span className="section__subtitle">Certifications & Social Updates</span>
 
       <div className="featured__container container grid">
         {visibleItems.map((item) => (
