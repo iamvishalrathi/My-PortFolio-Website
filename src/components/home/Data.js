@@ -5,7 +5,7 @@ const Data = ({ isDark }) => {
     <div className='home__data'>
       <h1 className='home__title'>Vishal Kumar
         <img
-          src={isDark ? '/v-white.png' : '/favicon.png'}
+          src={isDark ? '/favicon-white.png' : '/favicon.png'}
           alt='Vishal Kumar'
           className='home__title-img'
         />
