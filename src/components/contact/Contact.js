@@ -8,19 +8,20 @@ const Contact = () => {
     message: ''
   });
   const [error, setError] = useState('');
+  const [submitStatus, setSubmitStatus] = useState('Send Message');
 
   // Spam detection functions
   const isSpamContent = (text) => {
     // Convert to lowercase for case-insensitive checking
     const lowerText = text.toLowerCase();
-    
+
     // Check for spam keywords
     const spamKeywords = [
-      'casino', 'viagra', 'lottery', 'prize', 'winner', 
+      'casino', 'viagra', 'lottery', 'prize', 'winner',
       'buy now', 'cheap', 'discount', 'free offer', 'loan',
       'bitcoin', 'crypto', 'investment opportunity'
     ];
-    
+
     if (spamKeywords.some(keyword => lowerText.includes(keyword))) {
       return true;
     }
@@ -58,7 +59,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Name validation
     if (!formData.name.trim()) {
       setError('Name is required');
@@ -103,8 +104,37 @@ const Contact = () => {
     }
 
     // If all validations pass, submit the form
+    setSubmitStatus('Sending...');
     const form = e.target;
-    form.submit();
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+      .then(response => {
+        if (response.ok) {
+          // Reset form data after successful submission
+          setFormData({
+            name: '',
+            email: '',
+            message: ''
+          });
+          setSubmitStatus('Sent Successfully!');
+          setError(''); // Clear any existing errors
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(error => {
+        setError('Failed to send message. Please try again later.');
+      }).finally(() => {
+        // Reset submit status after 3 seconds
+        setTimeout(() => {
+          setSubmitStatus('Send Message');
+        }, 3000);
+      });
   };
 
   return (
@@ -114,8 +144,6 @@ const Contact = () => {
 
       <div className='contact__container container grid'>
         <div className='contact__content'>
-          {/* <h3 className='contact__title'>Talk to me</h3> */}
-
           <div className='contact__info'>
             <div className='contact__card'>
               <i className='bx bx-mail-send contact__card-icon'></i>
@@ -137,13 +165,13 @@ const Contact = () => {
 
             <div className='contact__card'>
               <i className='bx bxl-twitter contact__card-icon'></i>
-
               <h3 className='contact__card-title'>Twitter</h3>
               <span className='contact__card-data'>@iamvishalrathi1</span>
               <a href='https://twitter.com/iamvishalrathi1' target="_blank" className='contact__button'> Write me
                 <i className='bx bx-right-arrow-alt contact__button-icon'></i>
               </a>
             </div>
+
 
             {/* <div className='contact__card'>
               <i className='uil uil-location-point contact__card-icon'></i>
@@ -154,23 +182,21 @@ const Contact = () => {
           </div>
         </div>
         <div className='contact__content'>
-          {/* <h3 className='contact__title'>Write me your message</h3> */}
-
-          <form 
-            className='contact__form' 
+          <form
+            className='contact__form'
             action="https://formspree.io/f/xovjwvqz"
             method="POST"
             onSubmit={handleSubmit}
           >
             {error && <div className='contact__form-error'>{error}</div>}
-            
+
             <div className='contact__form-div'>
               <label className='contact__form-tag'>Name</label>
-              <input 
-                type='text' 
-                name='name' 
+              <input
+                type='text'
+                name='name'
                 className='contact__form-input'
-                placeholder='Name' 
+                placeholder='Name'
                 value={formData.name}
                 onChange={handleChange}
               />
@@ -178,10 +204,10 @@ const Contact = () => {
 
             <div className='contact__form-div'>
               <label className='contact__form-tag'>Email</label>
-              <input 
-                name='email' 
+              <input
+                name='email'
                 className='contact__form-input'
-                placeholder='Email' 
+                placeholder='Email'
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -189,17 +215,17 @@ const Contact = () => {
 
             <div className='contact__form-div contact__form-area'>
               <label className='contact__form-tag'>Message</label>
-              <textarea 
-                name='message' 
-                cols='30' 
-                rows='7' 
+              <textarea
+                name='message'
+                cols='30'
+                rows='7'
                 className='contact__form-input'
                 placeholder='Message'
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
             </div>
-            <button type='submit' className='button button--flex'>Send Message
+            <button type='submit' className='button button--flex'>{submitStatus}
               <svg
                 className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
