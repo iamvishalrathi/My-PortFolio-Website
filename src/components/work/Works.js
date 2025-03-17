@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { projectsData, projectsNav } from './Data'
 import WorksItems from './WorksItems'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -12,7 +12,7 @@ const Works = () => {
   const [projects, setProjects] = useState([])
   const [active, setActive] = useState(0)
 
-  const swiperRef = useRef(null)  // Create a reference for Swiper instance
+  // Remove unused swiperRef
   const [swiperInstance, setSwiperInstance] = useState(null)  // State to store Swiper instance
 
   useEffect(() => {
