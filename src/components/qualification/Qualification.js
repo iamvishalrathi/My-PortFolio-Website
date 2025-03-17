@@ -39,13 +39,34 @@ const experienceData = [
     title: "Startup Sphere Society",
     subtitle: "MAIT",
     period: "2022-2026",
-    role: "Tech Department"
+    role: "Technical Head"
   },
   {
     title: "National Cadet Corps",
     subtitle: "MAIT",
     period: "2022-2025",
     role: "Corporal"
+  },
+];
+
+const achievementsData = [
+  {
+    title: "NCC Fest Organiser",
+    subtitle: "Kartavya'24 & 25",
+    period: "2024 & 2025",
+    description: "Organised 10+ events"
+  },
+  {
+    title: "Hackathon Winner",
+    subtitle: "HackBlocks1.0",
+    period: "May 2024",
+    description: "Top 10 Finalists",
+  },
+  {
+    title: "Coding Competition Winner",
+    subtitle: "LogicMaze",
+    period: "March 2024",
+    description: "Bagged 3rd place"
   },
 ];
 
@@ -74,6 +95,11 @@ const Qualification = () => {
             {data.cgpa && (
               <div className='qualification__cgpa'>
                 <i className='uil uil-award'></i> {data.cgpa}
+              </div>
+            )}
+            {data.description && (
+              <div className='qualification__description'>
+                <i className='uil uil-trophy'></i> {data.description}
               </div>
             )}
           </div>
@@ -105,6 +131,11 @@ const Qualification = () => {
                 <i className='uil uil-award'></i> {data.cgpa}
               </div>
             )}
+            {data.description && (
+              <div className='qualification__description'>
+                <i className='uil uil-trophy'></i> {data.description}
+              </div>
+            )}
           </div>
         </>
       )}
@@ -114,7 +145,7 @@ const Qualification = () => {
   return (
     <section className='qualification section' id='qualifications'>
       <h2 className='section__title'>Qualification</h2>
-      <span className='section__subtitle'>My Personel Journey</span>
+      <span className='section__subtitle'>My Personal Journey</span>
 
       <div className='qualification__container container'>
         <div className='qualification__tabs'>
@@ -131,6 +162,13 @@ const Qualification = () => {
             onClick={() => toggleTab(2)}
           >
             <i className='uil uil-briefcase-alt qualification__icon'></i>{"  "}Experience
+          </div>
+
+          <div
+            className={`qualification__button ${toggleState === 3 ? 'qualification__active' : ''} button--flex`}
+            onClick={() => toggleTab(3)}
+          >
+            <i className='uil uil-trophy qualification__icon'></i>{"  "}Achievements
           </div>
         </div>
 
@@ -153,6 +191,17 @@ const Qualification = () => {
                 data={item}
                 index={index}
                 total={experienceData.length}
+              />
+            ))}
+          </div>
+
+          <div className={`qualification__content ${toggleState === 3 ? 'qualification__content-active' : ''}`}>
+            {achievementsData.map((item, index) => (
+              <QualificationItem
+                key={index}
+                data={item}
+                index={index}
+                total={achievementsData.length}
               />
             ))}
           </div>
