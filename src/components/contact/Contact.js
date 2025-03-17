@@ -106,7 +106,7 @@ const Contact = () => {
     // If all validations pass, submit the form
     setSubmitStatus('Sending...');
     const form = e.target;
-    fetch(form.action, {
+    fetch(process.env.REACT_APP_FORM_SPREE, {
       method: form.method,
       body: new FormData(form),
       headers: {
@@ -123,17 +123,16 @@ const Contact = () => {
           });
           setSubmitStatus('Sent Successfully!');
           setError(''); // Clear any existing errors
+          setTimeout(() => {
+            setSubmitStatus('Send Message');
+          }, 3000);
         } else {
           throw new Error('Form submission failed');
         }
       })
       .catch(error => {
         setError('Failed to send message. Please try again later.');
-      }).finally(() => {
-        // Reset submit status after 3 seconds
-        setTimeout(() => {
-          setSubmitStatus('Send Message');
-        }, 3000);
+        setSubmitStatus('Send Message');
       });
   };
 
@@ -164,27 +163,16 @@ const Contact = () => {
             </div>
 
             <div className='contact__card'>
-              <i className='bx bxl-twitter contact__card-icon'></i>
-              <h3 className='contact__card-title'>Twitter</h3>
-              <span className='contact__card-data'>@iamvishalrathi1</span>
-              <a href='https://twitter.com/iamvishalrathi1' target="_blank" className='contact__button'> Write me
-                <i className='bx bx-right-arrow-alt contact__button-icon'></i>
-              </a>
-            </div>
-
-
-            {/* <div className='contact__card'>
               <i className='uil uil-location-point contact__card-icon'></i>
 
               <h3 className='contact__card-title'>Location</h3>
               <span className='contact__card-data'>New Delhi, India</span>
-            </div> */}
+            </div>
           </div>
         </div>
         <div className='contact__content'>
           <form
             className='contact__form'
-            action="https://formspree.io/f/xovjwvqz"
             method="POST"
             onSubmit={handleSubmit}
           >
