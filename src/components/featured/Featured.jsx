@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Featured.css';
 
 const Featured = () => {
   const [showAll, setShowAll] = useState(false);
   const [displayCount, setDisplayCount] = useState(4);
+  const sectionRef = useRef(null);
 
   const featuredItems = [
     {
@@ -93,8 +94,16 @@ const Featured = () => {
   const visibleItems = showAll ? featuredItems : featuredItems.slice(0, displayCount);
   const hasMoreItems = featuredItems.length > displayCount;
 
+  const handleViewToggle = () => {
+    // If we're showing all items and about to collapse, scroll to the top of the section
+    if (showAll && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    setShowAll(!showAll);
+  };
+
   return (
-    <section className="featured section" id="featured">
+    <section className="featured section" id="featured" ref={sectionRef}>
       <h2 className="section__title">Featured</h2>
       <span className="section__subtitle">Certifications & Social Updates</span>
 
@@ -129,7 +138,7 @@ const Featured = () => {
         <div className="featured__view-more">
           <button
             className="featured__view-more-btn"
-            onClick={() => setShowAll(!showAll)}
+            onClick={handleViewToggle}
           >
             {showAll ? 'Show Less' : 'View More'}
             <i className={`bx ${showAll ? 'bx-chevron-up' : 'bx-chevron-down'} featured__view-more-icon`}></i>
