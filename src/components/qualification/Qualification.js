@@ -57,7 +57,7 @@ const achievementsData = [
     description: "Organised 10+ events"
   },
   {
-    title: "Hackathon Winner",
+    title: "Hackathon Finalists",
     subtitle: "HackBlocks1.0",
     period: "May 2024",
     description: "Top 10 Finalists",

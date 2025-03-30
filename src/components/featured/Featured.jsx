@@ -5,7 +5,8 @@ import { featuredItems } from './FeaturedItems';
 const Featured = () => {
   const [showAll, setShowAll] = useState(false);
   const [displayCount, setDisplayCount] = useState(4);
-  const [activeFilter, setActiveFilter] = useState('all'); // Add filter state
+  const [activeFilter, setActiveFilter] = useState('all');
+  const [animate, setAnimate] = useState(false);
   const sectionRef = useRef(null);
 
   featuredItems.sort((a, b) => {
@@ -51,10 +52,16 @@ const Featured = () => {
     setShowAll(!showAll);
   };
 
-  // Handle filter change
+  // Handle filter change with animation
   const handleFilterChange = (filter) => {
-    setActiveFilter(filter);
-    setShowAll(false); // Reset to show limited items when changing filter
+    if (filter === activeFilter) return;
+    
+    setAnimate(true);
+    setTimeout(() => {
+      setActiveFilter(filter);
+      setShowAll(false); // Reset to show limited items when changing filter
+      setAnimate(false);
+    }, 300);
     
     // Scroll to top of section when changing filter
     if (sectionRef.current) {
@@ -67,29 +74,29 @@ const Featured = () => {
       <h2 className="section__title">Featured</h2>
       <span className="section__subtitle">Certifications & Social Updates</span>
 
-      {/* Add filter buttons */}
+      {/* Filter buttons */}
       <div className="featured__filters">
         <button 
           className={`featured__filter-btn ${activeFilter === 'all' ? 'active-filter' : ''}`}
           onClick={() => handleFilterChange('all')}
         >
-          All
+          <span>All</span>
         </button>
         <button 
           className={`featured__filter-btn ${activeFilter === 'achievement' ? 'active-filter' : ''}`}
           onClick={() => handleFilterChange('achievement')}
         >
-          Certifications
+          <span>Certifications</span>
         </button>
         <button 
           className={`featured__filter-btn ${activeFilter === 'social' ? 'active-filter' : ''}`}
           onClick={() => handleFilterChange('social')}
         >
-          Social Updates
+          <span>Social Updates</span>
         </button>
       </div>
 
-      <div className="featured__container container grid">
+      <div className={`featured__container container grid ${animate ? 'featured__animate' : ''}`}>
         {visibleItems.map((item) => (
           <article className="featured__card" key={item.id}>
             <div className="featured__image">
