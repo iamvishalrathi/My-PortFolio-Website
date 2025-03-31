@@ -1,12 +1,12 @@
-import Work1 from '../../assets/work1.png'
-import Work2 from '../../assets/work2.png'
-import Work3 from '../../assets/work3.png'
-import Work4 from '../../assets/work4.png'
-import Work5 from '../../assets/work5.png'
-import Work6 from '../../assets/work6.png'
-import Work7 from '../../assets/work7.png'
-import Work8 from '../../assets/work8.png'
-import Work9 from '../../assets/work9.png'
+import Work1 from '../../assets/work/work1.png'
+import Work2 from '../../assets/work/work2.png'
+import Work3 from '../../assets/work/work3.png'
+import Work4 from '../../assets/work/work4.png'
+import Work5 from '../../assets/work/work5.png'
+import Work6 from '../../assets/work/work6.png'
+import Work7 from '../../assets/work/work7.png'
+import Work8 from '../../assets/work/work8.png'
+import Work9 from '../../assets/work/work9.png'
 
 export const projectsData = [
     {
