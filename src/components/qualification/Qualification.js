@@ -18,7 +18,7 @@ const educationData = [
     title: "Secondary School",
     subtitle: "D.A.V. Centenary Public School, Delhi",
     period: "2014-2020",
-    cgpa: "93.4% in CBSE Board"
+    cgpa: "93.33% in CBSE Board"
   }
 ];
 
@@ -31,21 +31,21 @@ const experienceData = [
   },
   {
     title: "Full Stack Developer",
-    subtitle: "CoderOne",
+    subtitle: "CoderOne Company",
     period: "Jun 2024 - Aug 2024",
     role: "Intern"
   },
   {
-    title: "Startup Sphere Society",
-    subtitle: "MAIT",
+    title: "Full Stack Developer",
+    subtitle: "Startup Sphere Society",
     period: "2022-2026",
-    role: "Technical Head"
+    role: "Self-Employed"
   },
   {
-    title: "National Cadet Corps",
-    subtitle: "MAIT",
+    title: "Corporal, Social Head",
+    subtitle: "National Cadet Corps",
     period: "2022-2025",
-    role: "Corporal"
+    role: "Self-Employed"
   },
 ];
 
