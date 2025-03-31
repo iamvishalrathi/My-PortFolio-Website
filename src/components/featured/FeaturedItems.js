@@ -59,4 +59,24 @@ export const featuredItems = [
         pinned: true,
         link: "https://www.linkedin.com/posts/iamvishalrathi_logimatindia2025-logimat-logistics-activity-7302000150569177088-Cy0k?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
+    {
+        id: 7,
+        type: 'social',
+        title: "Next.js Conference",
+        platform: "Vercel",
+        date: "October 2024",
+        image: "/featured/Social/NextJs conference.png",
+        pinned: false,
+        link: "https://www.linkedin.com/posts/iamvishalrathi_vishals-ticket-nextjs-conf-activity-7250433819600674816-wYYP?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
+    },
+    {
+        id: 8,
+        type: 'social',
+        title: "Microsoft Office Visit",
+        platform: "Microsoft Azure",
+        date: "May 2024",
+        image: "/featured/Social/GenAI BOOTCAMP.jpeg",
+        pinned: false,
+        link: "https://www.linkedin.com/posts/iamvishalrathi_genaibootcamp-microsoftazure-aiinnovation-activity-7192764557411377152-U5Rs?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
+    }
 ]
