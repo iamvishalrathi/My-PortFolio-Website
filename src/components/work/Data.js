@@ -12,10 +12,10 @@ export const projectsData = [
     {
         id: 1,
         image: Work1,
-        title: 'Podcastr',
+        title: 'PodTales',
         category: 'major',
-        link: 'https://my-podcastr.vercel.app/',
-        github: 'https://github.com/iamvishalrathi/Podcastr',
+        link: 'https://podtales.vercel.app/',
+        github: 'https://github.com/iamvishalrathi/PodTales',
         description: 'An AI-powered SaaS podcast streaming platform by Next.js.'
     },
     {

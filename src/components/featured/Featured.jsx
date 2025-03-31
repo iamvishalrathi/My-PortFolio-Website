@@ -4,7 +4,7 @@ import { featuredItems } from './FeaturedItems';
 
 const Featured = () => {
   const [showAll, setShowAll] = useState(false);
-  const [displayCount, setDisplayCount] = useState(4);
+  const [displayCount, setDisplayCount] = useState(2);
   const [activeFilter, setActiveFilter] = useState('all');
   const [animate, setAnimate] = useState(false);
   const sectionRef = useRef(null);
@@ -22,9 +22,9 @@ const Featured = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 968) {
-        setDisplayCount(3);
+        setDisplayCount(2);
       } else {
-        setDisplayCount(4);
+        setDisplayCount(2);
       }
     };
 
@@ -34,14 +34,14 @@ const Featured = () => {
   }, []);
 
   // Filter items based on activeFilter
-  const filteredItems = activeFilter === 'all' 
-    ? featuredItems 
+  const filteredItems = activeFilter === 'all'
+    ? featuredItems
     : featuredItems.filter(item => item.type === activeFilter);
 
-  const visibleItems = showAll 
-    ? filteredItems 
+  const visibleItems = showAll
+    ? filteredItems
     : filteredItems.slice(0, displayCount);
-    
+
   const hasMoreItems = filteredItems.length > displayCount;
 
   const handleViewToggle = () => {
@@ -55,14 +55,14 @@ const Featured = () => {
   // Handle filter change with animation
   const handleFilterChange = (filter) => {
     if (filter === activeFilter) return;
-    
+
     setAnimate(true);
     setTimeout(() => {
       setActiveFilter(filter);
       setShowAll(false); // Reset to show limited items when changing filter
       setAnimate(false);
     }, 300);
-    
+
     // Scroll to top of section when changing filter
     if (sectionRef.current) {
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -76,19 +76,19 @@ const Featured = () => {
 
       {/* Filter buttons */}
       <div className="featured__filters">
-        <button 
+        <button
           className={`featured__filter-btn ${activeFilter === 'all' ? 'active-filter' : ''}`}
           onClick={() => handleFilterChange('all')}
         >
           <span>All</span>
         </button>
-        <button 
+        <button
           className={`featured__filter-btn ${activeFilter === 'achievement' ? 'active-filter' : ''}`}
           onClick={() => handleFilterChange('achievement')}
         >
           <span>Certifications</span>
         </button>
-        <button 
+        <button
           className={`featured__filter-btn ${activeFilter === 'social' ? 'active-filter' : ''}`}
           onClick={() => handleFilterChange('social')}
         >
@@ -102,7 +102,7 @@ const Featured = () => {
             <div className="featured__image">
               <img src={item.image} alt={item.title} />
               <div className="featured__platform">
-                <i className={`uil ${item.type === 'social' ? 'uil-share-alt' : 'uil-award'
+                <i className={`uil ${item.type === 'social' ? 'uil-globe' : 'uil-award'
                   }`}></i>
                 {item.platform}
               </div>
