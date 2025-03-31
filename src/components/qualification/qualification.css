@@ -127,12 +127,36 @@
 
     .qualification__button {
         margin: 0 var(--mb-0-75);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: var(--small-font-size);
+    }
+    
+    .qualification__icon {
+        font-size: 1.5rem;
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+    }
+    
+    .qualification__tabs {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 350px) {
     .qualification__data {
         gap: 0.5rem;
-
+    }
+    
+    .qualification__button {
+        font-size: var(--smaller-font-size);
+    }
+    
+    .qualification__icon {
+        font-size: 1.25rem;
     }
 }
