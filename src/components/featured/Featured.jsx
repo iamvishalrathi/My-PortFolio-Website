@@ -102,7 +102,7 @@ const Featured = () => {
             <div className="featured__image">
               <img src={item.image} alt={item.title} />
               <div className="featured__platform">
-                <i className={`uil ${item.type === 'social' ? 'uil-globe' : 'uil-award'
+                <i className={`uil ${item.type === 'social' ? 'uil-megaphone' : 'uil-award'
                   }`}></i>
                 {item.platform}
               </div>
