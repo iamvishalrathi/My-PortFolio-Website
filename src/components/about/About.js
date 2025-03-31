@@ -15,11 +15,9 @@ const About = () => {
         <div className='about__data'>
           <Info />
 
-          <p className='about__description'>I am currently pursuing a Bachelor's degree
-            in Computer Science and Engineering, driven by a passion for Web Development.
-            My expertise lies in the MERN stack, where I leverage my skills to build dynamic,
-            robust applications. Beyond my technical pursuits, I am an active National Cadet Corps
-            (NCC) cadet, embracing leadership, teamwork, and community service.
+          <p className='about__description'>I am currently pursuing a 
+            Bachelor's degree in Computer Science and Engineering, specialise in building dynamic, scalable applications and 
+            leveraging Gen AI for innovative solutions. As an active National Cadet Corps (NCC) cadet, I embrace leadership, teamwork, and community service. Additionally, I am a geopolitics enthusiast, exploring the intersection of technology, AI, and global affairs.
           </p>
 
           <a target="_blank" rel="noreferrer" href={CV} className='button button--flex'>View CV
