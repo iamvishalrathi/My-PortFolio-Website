@@ -202,6 +202,12 @@ body.dark-theme {
     .work__img {
         width: 100%;
     }
+    
+    /* Hide navigation buttons on mobile */
+    .swiper-button-left,
+    .swiper-button-right {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -212,8 +218,8 @@ body.dark-theme {
     .work__filters {
         column-gap: 0.25rem;
     }
-
 }
+
 
 .works-container {
     position: relative;
