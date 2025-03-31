@@ -75,7 +75,7 @@ export const featuredItems = [
         title: "Microsoft Office Visit",
         platform: "Microsoft Azure",
         date: "May 2024",
-        image: "/featured/Social/GenAI BOOTCAMP.jpeg",
+        image: "/featured/Social/Microsoft Visit.png",
         pinned: false,
         link: "https://www.linkedin.com/posts/iamvishalrathi_genaibootcamp-microsoftazure-aiinnovation-activity-7192764557411377152-U5Rs?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     }
