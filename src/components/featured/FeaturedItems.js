@@ -2,7 +2,7 @@ export const featuredItems = [
     {
         id: 1,
         type: 'achievement',
-        title: "Top 10 | HackBlocks1.0",
+        title: "Top 10 Position | HackBlocks1.0",
         platform: "BVCOE & Microsoft Azure",
         date: "May 2024",
         image: "/featured/Certification/Hackblock1.0.jpg",
@@ -78,5 +78,15 @@ export const featuredItems = [
         image: "/featured/Social/Microsoft Visit.png",
         pinned: false,
         link: "https://www.linkedin.com/posts/iamvishalrathi_genaibootcamp-microsoftazure-aiinnovation-activity-7192764557411377152-U5Rs?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
+    },
+    {
+        id: 9,
+        type:'achievement',
+        title: "2nd Position | AMHacks1.0",
+        platform: "IGDTUW College",
+        date: "April 2025",
+        image: "/featured/Certification/AMHacks'25.jpg",
+        pinned: true,
+        link: "https://www.linkedin.com/posts/iamvishalrathi_hackathon-innovation-teamwork-activity-7315786122779877377-4I_9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     }
 ]
