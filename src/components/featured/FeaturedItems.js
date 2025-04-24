@@ -83,7 +83,7 @@ export const featuredItems = [
         id: 9,
         type:'achievement',
         title: "2nd Position | AMHacks1.0",
-        platform: "IGDTUW College",
+        platform: "IGDTUW",
         date: "April 2025",
         image: "/featured/Certification/AMHacks'25.jpg",
         pinned: true,
