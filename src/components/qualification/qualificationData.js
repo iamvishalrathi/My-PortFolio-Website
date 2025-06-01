@@ -23,25 +23,25 @@ export const experienceData = [
     {
         title: "Full Stack Developer",
         subtitle: "Truxie Startup",
-        period: "Nov 2024 - Apr 2025",
+        period: "Nov'24 - Apr'25",
         role: "Intern"
     },
     {
         title: "Full Stack Developer",
         subtitle: "CoderOne Company",
-        period: "Jun 2024 - Aug 2024",
+        period: "Jun'24 - Aug'24",
         role: "Intern"
     },
     {
         title: "Full Stack Developer",
         subtitle: "Startup Sphere Society",
-        period: "Dec 2022 - Apr 2025",
+        period: "Dec'22 - Apr'25",
         role: "Self-Employed"
     },
     {
         title: "Corporal, Social Head",
         subtitle: "National Cadet Corps",
-        period: "Dec 2022 - Apr 2025",
+        period: "Dec'22 - Apr'25",
         role: "Self-Employed"
     },
 ];
