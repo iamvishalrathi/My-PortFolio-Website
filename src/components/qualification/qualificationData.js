@@ -35,13 +35,13 @@ export const experienceData = [
     {
         title: "Full Stack Developer",
         subtitle: "Startup Sphere Society",
-        period: "2022-2025",
+        period: "Dec 2022- Apr 2025",
         role: "Self-Employed"
     },
     {
         title: "Corporal, Social Head",
         subtitle: "National Cadet Corps",
-        period: "2022-2025",
+        period: "Dec 2022- Apr 2025",
         role: "Self-Employed"
     },
 ];
