@@ -12,9 +12,6 @@ const Social = () => {
       <a href='https://twitter.com/iamvishalrathi1' className='home__social-icon' target='_blank' rel="noreferrer">
         <i className='uil uil-twitter'></i>
       </a>
-      <a href='https://www.instagram.com/iamvishalrathi' className='home__social-icon' target='_blank' rel="noreferrer">
-        <i className='uil uil-instagram'></i>
-      </a>
     </div>
   )
 }

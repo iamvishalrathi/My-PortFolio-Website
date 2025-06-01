@@ -23,7 +23,7 @@ export const experienceData = [
     {
         title: "Full Stack Developer",
         subtitle: "Truxie Startup",
-        period: "Nov 2024 - Present",
+        period: "Nov 2024 - Apr 2025",
         role: "Intern"
     },
     {
@@ -35,7 +35,7 @@ export const experienceData = [
     {
         title: "Full Stack Developer",
         subtitle: "Startup Sphere Society",
-        period: "2022-2026",
+        period: "2022-2025",
         role: "Self-Employed"
     },
     {
@@ -48,13 +48,13 @@ export const experienceData = [
 
 export const achievementsData = [
     {
-        title: "NCC Fest Organiser",
-        subtitle: "Kartavya'24 & 25",
-        period: "2024 & 2025",
-        description: "Organised 10+ events"
+        title: "Hackathon Winner",
+        subtitle: "AMHacks1.0",
+        period: "April 2025",
+        description: "Runner Up"
     },
     {
-        title: "Hackathon Finalists",
+        title: "Hackathon Finalist",
         subtitle: "HackBlocks1.0",
         period: "May 2024",
         description: "Top 10 Finalists",
@@ -63,7 +63,7 @@ export const achievementsData = [
         title: "Coding Competition Winner",
         subtitle: "LogicMaze",
         period: "March 2024",
-        description: "Bagged 3rd place"
+        description: "2nd Runner Up",
     },
 ];
 

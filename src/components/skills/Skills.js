@@ -11,7 +11,6 @@ const Skills = () => {
 
             <div className='skills__container container grid'>
                 <Upper />
-
                 <Lower />
             </div>
     </section>
