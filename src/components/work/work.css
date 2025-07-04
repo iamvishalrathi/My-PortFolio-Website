@@ -64,6 +64,7 @@
 .work__title {
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-5);
+    text-align: center;
 }
 
 .work__button {
@@ -151,6 +152,7 @@ body.dark-theme {
     word-break: break-word;
     white-space: normal;
     overflow-wrap: break-word;
+    text-align: center;
 }
 
 @media screen and (max-width: 992px) {

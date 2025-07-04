@@ -7,6 +7,7 @@ import Work6 from '../../assets/work/work6.png'
 import Work7 from '../../assets/work/work7.png'
 import Work8 from '../../assets/work/work8.png'
 import Work9 from '../../assets/work/work9.png'
+import Work10 from '../../assets/work/work10.svg'
 
 export const projectsData = [
     {
@@ -19,13 +20,31 @@ export const projectsData = [
         description: 'An AI-powered SaaS podcast streaming platform by Next.js.'
     },
     {
+        id: 10,
+        image: Work10,
+        title: 'NextRole',
+        category: 'major',
+        link: 'https://next-role-prep.vercel.app/',
+        github: 'https://github.com/iamvishalrathi/NextRole',
+        description: 'An AI-powered interview preparation platform by Vapi.'
+    },
+    {
         id: 2,
         image: Work2,
-        title: 'Chatterly ChatApp',
+        title: 'Chatterly',
         category: 'major',
         link: 'https://chatterly-hp0h.onrender.com/signup',
         github: 'https://github.com/iamvishalrathi/Chatterly-ChatApp',
         description: 'A real-time chat application using Socket.io and React.'
+    },
+    {
+        id: 5,
+        image: Work5,
+        title: 'DevPad',
+        category: 'major',
+        link: 'https://devpad2-0.onrender.com/',
+        github: 'https://github.com/iamvishalrathi/DevPad',
+        description: 'An online code editor with real-time collaboration features.'
     },
     {
         id: 3,
@@ -44,15 +63,6 @@ export const projectsData = [
         link: 'https://shareprompt.onrender.com/',
         github: 'https://github.com/iamvishalrathi/SharePrompt',
         description: 'A platform for sharing prompts and creative writing ideas.'
-    },
-    {
-        id: 5,
-        image: Work5,
-        title: 'DevPad',
-        category: 'major',
-        link: 'https://devpad2-0.onrender.com/',
-        github: 'https://github.com/iamvishalrathi/DevPad',
-        description: 'An online code editor with real-time collaboration features.'
     },
     {
         id: 6,
