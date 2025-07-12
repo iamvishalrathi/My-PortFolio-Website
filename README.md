@@ -31,7 +31,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 
 ### Contact Details
 
-- 📧 **Email:** [rajatrathi029@gmail.com](mailto:rajatrathi029@gmail.com)
+- 📧 **Email:** [vishalkumar4work@gmail.com](mailto:vishalkumar4work@gmail.com)
 
 ---
 
