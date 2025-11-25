@@ -88,5 +88,15 @@ export const featuredItems = [
         image: "/featured/Achievements/AMHacks'25.jpg",
         pinned: true,
         link: "https://www.linkedin.com/posts/iamvishalrathi_hackathon-innovation-teamwork-activity-7315786122779877377-4I_9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
+    },
+    {
+        id: 10,
+        type: 'achievements',
+        title: "1st Position | Buildathon'25",
+        platform: "Material+",
+        date: "August 2025",
+        image: "/featured/Achievements/Buildathon.jpg",
+        pinned: true,
+        link: "https://www.linkedin.com/posts/vinay-khatri-751607273_buildathon-material-hackathonjourney-ugcPost-7368102051794341888-T5E-?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     }
 ]
