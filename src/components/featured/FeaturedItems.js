@@ -1,7 +1,7 @@
 export const featuredItems = [
     {
         id: 1,
-        type: 'achievement',
+        type: 'achievements',
         title: "Top 10 Position | HackBlocks1.0",
         platform: "BVCOE & Microsoft Azure",
         date: "May 2024",
@@ -11,7 +11,7 @@ export const featuredItems = [
     },
     {
         id: 2,
-        type: 'achievement',
+        type: 'achievements',
         title: "3rd Position | Logic Maze",
         platform: "TechCom MAIT",
         date: "March 2024",
@@ -21,7 +21,7 @@ export const featuredItems = [
     },
     {
         id: 3,
-        type: 'achievement',
+        type: 'certification',
         title: "GenAI BOOTCAMP",
         platform: "Microsoft Azure",
         date: "May 2024",
@@ -31,7 +31,7 @@ export const featuredItems = [
     },
     {
         id: 4,
-        type: 'achievement',
+        type: 'certification',
         title: "UAS Bootcamp",
         platform: "C-DAC",
         date: "Aug 2024",
@@ -41,7 +41,7 @@ export const featuredItems = [
     },
     {
         id: 5,
-        type: 'achievement',
+        type: 'certification',
         title: "Kartavya Fest",
         platform: "National Cadet Corps",
         date: "March 2024",
@@ -81,7 +81,7 @@ export const featuredItems = [
     },
     {
         id: 9,
-        type:'achievement',
+        type:'achievements',
         title: "2nd Position | AMHacks1.0",
         platform: "IGDTUW",
         date: "April 2025",
