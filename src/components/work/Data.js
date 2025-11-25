@@ -42,7 +42,7 @@ export const projectsData = [
         image: Work5,
         title: 'DevPad',
         category: 'major',
-        link: 'https://devpad2-0.onrender.com/',
+        link: 'https://devpad-wdln.onrender.com',
         github: 'https://github.com/iamvishalrathi/DevPad',
         description: 'An online code editor with real-time collaboration features.'
     },
