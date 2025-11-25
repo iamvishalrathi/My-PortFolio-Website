@@ -5,7 +5,7 @@ export const featuredItems = [
         title: "Top 10 Position | HackBlocks1.0",
         platform: "BVCOE & Microsoft Azure",
         date: "May 2024",
-        image: "/featured/Certification/Hackblock1.0.jpg",
+        image: "/featured/Achievements/Hackblock1.0.jpg",
         pinned: true,
         link: "https://www.linkedin.com/posts/iamvishalrathi_project-web3-blockchain-activity-7195300104231133184-3MkR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
@@ -15,37 +15,37 @@ export const featuredItems = [
         title: "3rd Position | Logic Maze",
         platform: "TechCom MAIT",
         date: "March 2024",
-        image: "/featured/Certification/Logic Maze.jpg",
+        image: "/featured/Achievements/Logic Maze.jpg",
         pinned: true,
         link: "https://www.linkedin.com/posts/iamvishalrathi_logicmazecompetition-techcom-mait-activity-7176797454900633600-HgSm?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
         id: 3,
-        type: 'certification',
+        type: 'achievements',
         title: "GenAI BOOTCAMP",
         platform: "Microsoft Azure",
         date: "May 2024",
-        image: "/featured/Certification/GenAI BOOTCAMP.png",
+        image: "/featured/Achievements/GenAI BOOTCAMP.png",
         pinned: false,
         link: "https://www.linkedin.com/posts/iamvishalrathi_reskill-azuredevelopercommunity-generativeaibootcamp-activity-7194638808364060673-zqIL?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
         id: 4,
-        type: 'certification',
+        type: 'achievements',
         title: "UAS Bootcamp",
         platform: "C-DAC",
         date: "Aug 2024",
-        image: "/featured/Certification/Drone_UAS Workshop.jpg",
+        image: "/featured/Achievements/Drone_UAS Workshop.jpg",
         pinned: false,
         link: "https://www.linkedin.com/posts/iamvishalrathi_uas-dronetechnology-capacitybuilding-activity-7232765162896666624-BWd7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
     {
         id: 5,
-        type: 'certification',
+        type: 'achievements',
         title: "Kartavya Fest",
         platform: "National Cadet Corps",
         date: "March 2024",
-        image: "/featured/Certification/KARTAVYA'24.jpg",
+        image: "/featured/Achievements/KARTAVYA'24.jpg",
         pinned: false,
         link: "https://www.linkedin.com/posts/iamvishalrathi_mait-ncc-teamwork-activity-7187393601620905984-2e7z?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     },
@@ -85,7 +85,7 @@ export const featuredItems = [
         title: "2nd Position | AMHacks1.0",
         platform: "IGDTUW",
         date: "April 2025",
-        image: "/featured/Certification/AMHacks'25.jpg",
+        image: "/featured/Achievements/AMHacks'25.jpg",
         pinned: true,
         link: "https://www.linkedin.com/posts/iamvishalrathi_hackathon-innovation-teamwork-activity-7315786122779877377-4I_9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMC-BcB4FOXBMr2BSNkVDjR6ivXZywfAoI"
     }

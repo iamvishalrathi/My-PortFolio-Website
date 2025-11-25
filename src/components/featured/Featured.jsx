@@ -72,7 +72,7 @@ const Featured = () => {
   return (
     <section className="featured section" id="featured" ref={sectionRef}>
       <h2 className="section__title">Featured</h2>
-      <span className="section__subtitle">Achievements, Certifications & Social Updates</span>
+      <span className="section__subtitle">Achievements & Social Updates</span>
 
       {/* Filter buttons */}
       <div className="featured__filters">
@@ -87,12 +87,6 @@ const Featured = () => {
           onClick={() => handleFilterChange('achievements')}
         >
           <span>Achievements</span>
-        </button>
-        <button
-          className={`featured__filter-btn ${activeFilter === 'certification' ? 'active-filter' : ''}`}
-          onClick={() => handleFilterChange('certification')}
-        >
-          <span>Certifications</span>
         </button>
         <button
           className={`featured__filter-btn ${activeFilter === 'social' ? 'active-filter' : ''}`}
