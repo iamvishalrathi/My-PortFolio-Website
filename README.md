@@ -3,7 +3,7 @@
   
   # Vishal Kumar's Portfolio
   
-  [![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://iamvishalkumar.me/)
+  [![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://iamvishalkumar.vercel.app/)
   [![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)](https://github.com/iamvishalrathi/My-PortFolio-Website)
   [![React](https://img.shields.io/badge/React-18.2.0-blue)](https://reactjs.org/)
 </div>
@@ -44,7 +44,7 @@ I'm a Full Stack Developer based in New Delhi, highly passionate about programmi
 
 You can explore the portfolio live by visiting:
 
-[**Vishal Kumar - Preview the Portfolio**](https://iamvishalkumar.me/)
+[**Vishal Kumar - Preview the Portfolio**](https://iamvishalkumar.vercel.app/)
 
 ### 📸 Screenshot
 ![Portfolio Preview](https://github.com/iamvishalrathi/My-PortFolio-Website/blob/main/public/live.png)
@@ -118,7 +118,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 ### Contact Details
 
 - 📧 **Email:** [vishalkumar4work@gmail.com](mailto:vishalkumar4work@gmail.com)
-- 🌐 **Website:** [iamvishalkumar.me](https://iamvishalkumar.me/)
+- 🌐 **Website:** [iamvishalkumar.me](https://iamvishalkumar.vercel.app/)
 - 💼 **GitHub:** [@iamvishalrathi](https://github.com/iamvishalrathi)
 
 ## 📄 License
